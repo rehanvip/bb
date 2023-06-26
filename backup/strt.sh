@@ -1,5 +1,5 @@
 #!/bin/bash
-# TARAP KUHING
+# PAPADA'AN STORE
 # ==========================================
 # Color
 RED='\033[0;31m'
