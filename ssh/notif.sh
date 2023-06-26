@@ -13,7 +13,7 @@ domain=$(cat /etc/xray/domain)
 LocalVersion=$(cat /root/versi)
 IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
-Exp=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $3}')
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
 domain=$(cat /etc/xray/domain) 
@@ -22,12 +22,12 @@ tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | 
 DATE_EXEC="$(date "+%d %b %Y %H:%M")"
 REGION=$(cat $TMPFILE | jq '.region' | sed 's/"//g')
 COUNTRY=$(cat $TMPFILE | jq '.country' | sed 's/"//g')
-Name=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $2}')
 MYIP=$(curl -sS ipv4.icanhazip.com)
 TEXT="
 <code>◇━━━━━━━━━━━━━━◇</code>
 <u>⚠️ AUTOSCRIPT INSTALLER ⚠️</b>
-<u>⚠️ TARAP KUHING TUNNELING ⚠️</b>
+<u>⚠️ PAPADA'AN STORE ⚠️</b>
 <code>◇━━━━━━━━━━━━━━◇</code>
 <code>DOMAIN     : </code><code>${domain}</code>
 <code>LINUX      : </code><code>${MYIP}</code>
