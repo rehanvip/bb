@@ -1,7 +1,7 @@
 #!/bin/bash
 TIMES="10"
-CHATID="847645599"
-KEY="6208240566:AAFINY02Hij6uwZo1rbgSLoyb4qBeT4p7RA"
+CHATID="2118266757"
+KEY="5585616518:AAGxgHXqxvZC4hGuQmpPF_mj5pjiOcJmbKs"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 curl -s ipinfo.io/city?token=75082b4831f909 >> /etc/xray/city
 curl -s ipinfo.io/org?token=75082b4831f909  | cut -d " " -f 2-10 >> /etc/xray/isp
