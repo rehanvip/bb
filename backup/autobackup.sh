@@ -1,5 +1,5 @@
 #!/bin/bash
-# TARAP KUHING
+# PAPADA'AN STORE
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -94,7 +94,7 @@ start
 fi
 email=$(cat /home/email)
 echo -e "
-Ini adalah isi email percobaaan dari script tarap kuhing tunneling kirim email dari vps kamu
+Ini adalah isi email percobaaan dari script papada'an store kirim email dari vps kamu
 IP VPS : $IP
 Tanggal : $date
 " | mail -s "Percobaan Pengiriman Email" $email
