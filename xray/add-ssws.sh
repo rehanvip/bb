@@ -1,5 +1,5 @@
 #!/bin/bash
-# // font color configuration | TARAP KUHING AUTOSCRIPT
+# // font color configuration | PAPADA'AN STORE AUTOSCRIPT
 red() { echo -e "\\033[32;1m${*}\\033[0m"; }
 CHATID=`cat /etc/per/id`
 KEY=`cat /etc/per/token`
@@ -49,12 +49,12 @@ shadowsockslink1="ss://${shadowsocks_base64e}@$domain:443?plugin=xray-plugin;mux
 systemctl restart xray
 rm -rf /tmp/log
 rm -rf /tmp/log1
-cat >/etc/Tarap-Kuhing/public_html/ss-$user.txt <<-END
+cat >/etc/HssPunya93/public_html/ss-$user.txt <<-END
 ====================================================================
-             P R O J E C T  O F  T A R A P  K U H I N G
+             P R O J E C T  O F  P A P A D A A N   S T O R E
                        [Freedom Internet]
 ====================================================================
-        https://github.com/Tarap-Kuhing/v
+        https://github.com/HssPunya93/hss
 ====================================================================
               Format Shadowsocks WS (CDN)
 ====================================================================
