@@ -1,10 +1,10 @@
 #!/bin/bash
 MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
-DOMAIN=hendra93.my.id
+DOMAIN=ppnstore.xyz
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 dns=${sub}.ppnstore.xyz
-CF_ID=merahjambo@gmail.com
+CF_ID=putrameratus2@gmail.com
 CF_KEY=69c3940d1896bc19698277104e783dab6cee4
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
