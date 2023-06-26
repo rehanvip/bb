@@ -1,6 +1,6 @@
 #!/bin/bash
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps > /root/tmp
+    curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -18,7 +18,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -35,7 +35,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -53,7 +53,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $3}')
 fi
 
 # =========================================
@@ -189,7 +189,7 @@ else
 resv2r="${red}OFF${NC}"
 fi
 today=$(date -d "0 days" +"%Y-%m-%d")
-Exp1=$(curl https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $3}')
+Exp1=$(curl https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $3}')
 if [[ $today < $Exp1 ]]; then
     sts="${Info}"
 else
@@ -209,7 +209,7 @@ today=`date -d "0 days" +"%Y-%m-%d"`
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$today" +%s)
 certificate=$(( (d1 - d2) / 86400 ))
-export sem=$( curl -s https://raw.githubusercontent.com/Tarap-Kuhing/v/main/versi)
+export sem=$( curl -s https://raw.githubusercontent.com/HssPunya93/hss/main/versi)
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
@@ -227,11 +227,11 @@ echo -e "${BIYellow}□ CPU Usage           = ${BICyan}$cpu_usage"
 echo -e "${BIYellow}□ Clients Name        = ${BICyan}${Name}${NC}"
 echo -e "${BIYellow}□ Expired Script VPS  = ${RED}${certificate} ${BIYellow}day${NC}"
 echo -e "${BIYellow}□ Time Reboot VPS     = ${BICyan}00:00 ${GREEN}( Jam 12 Malam )${NC}"
-echo -e "${BIYellow}□ WHATSAPP            = ${IPurple}{ ${BIWhite}085754292950 ${IPurple}}${NC}"
-echo -e "${BIYellow}□ AutoScript By T.K.T = ${IPurple}( ${BICyan}TARAP ${BIYellow}KUHING ${BIWhite}TUNNELING ${IPurple})${NC}"
+echo -e "${BIYellow}□ WHATSAPP            = ${IPurple}{ ${BIWhite}081250851741 ${IPurple}}${NC}"
+echo -e "${BIYellow}□ AutoScript By T.K.T = ${IPurple}( ${BICyan}PAPADA'AN ${BIYellow}STORE ${BIWhite}TUNNELING ${IPurple})${NC}"
 
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │                  ${BIWhite}TARAP ${BIYellow}KUHING ${BICyan}TUNNELING ${NC}"
+echo -e "${BICyan} │                  ${BIWhite}PAPADA'AN ${BIYellow}STORE ${NC}"
 echo -e "${BICyan} | ${NC}"
 echo -e " ${BICyan}│  ${BICyan}Use Core        :  ${IPurple}XRAY ${NC}"
 echo -e " ${BICyan}│  ${BICyan}IP-VPS          :  ${BIYellow}$IPVPS ${NC}"
