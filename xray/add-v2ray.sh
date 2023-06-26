@@ -1,12 +1,12 @@
 #!/bin/bash
 # //====================================================
 # //	System Request:Debian 9+/Ubuntu 18.04+/20+
-# //	Author:	Tarap-Kuhing
+# //	Author:	Papada'an Store
 # //	Dscription: Xray Menu Management
-# //	email: merahjambo@gmail.com
-# //  telegram: https://t.me/Baung2012
+# //	email: putrameratus2@gmail.com
+# //  telegram: https://t.me/Cibut2d
 # //====================================================
-# // font color configuration | TARAP KUHING AUTOSCRIPT
+# // font color configuration | PAPADA'AN STORE AUTOSCRIPT
 red() { echo -e "\\033[32;1m${*}\\033[0m"; }
 TIMES="10"
 CHATID=`cat /etc/per/id`
@@ -109,17 +109,17 @@ VMESS_OPOK=`cat<<EOF
       "tls": "none"
 }
 EOF`
-cat >/etc/Tarap-Kuhing/public_html/vmess-$user.txt <<-END
+cat >/etc/HssPunya93/public_html/vmess-$user.txt <<-END
 ====================================================================
-             P R O J E C T  O F  T A R A P  K U H I N G
+             P R O J E C T  O F  P A P A D A A N  S T O R E
                        [Freedom Internet]
 ====================================================================
-        https://github.com/Tarap-Kuhing/v
+        https://github.com/HssPunya93/hss
 ====================================================================
               Format Vmess WS (CDN)
 ====================================================================
 
-- name: Tarap-Kuhing-Vmess-$user-WS (CDN)
+- name: papadaan-store-Vmess-$user-WS (CDN)
   type: vmess
   server: ${domain}
   port: 443
@@ -139,7 +139,7 @@ _______________________________________________________
               Format Vmess WS (CDN) Non TLS
 _______________________________________________________
 
-- name: Tarap-Kuhing-$user-WS (CDN) Non TLS
+- name: papadaan-store-$user-WS (CDN) Non TLS
   type: vmess
   server: ${domain}
   port: 80
@@ -159,7 +159,7 @@ _______________________________________________________
               Format Vmess gRPC (SNI)
 _______________________________________________________
 
-- name: Tarap-Kuhing-$user-gRPC (SNI)
+- name: papadaan-store-$user-gRPC (SNI)
   server: ${domain}
   port: 443
   type: vmess
@@ -177,7 +177,7 @@ _______________________________________________________
         Format Vmess WS (CDN) Non TLS Opok
 _______________________________________________________
 
-- name: Tarap-Kuhing-$user-WS (CDN) Non TLS
+- name: papadaan-store-$user-WS (CDN) Non TLS
   type: vmess
   server: ${domain}
   port: 80
