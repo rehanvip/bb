@@ -150,8 +150,8 @@ mkdir -p /etc/dns
 mkdir -p /etc/slowdns
 touch /etc/slowdns/server.pub
 touch /etc/slowdns/server.key
-mkdir -p /etc/HssPunya93
-mkdir -p /etc/HssPunya93/theme
+mkdir -p /etc/kuhing
+mkdir -p /etc/kuhing/theme
 mkdir -p /var/lib >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 clear
@@ -193,31 +193,31 @@ wget https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/cf.sh && chmod +x
 rm -f /root/cf.sh
 clear
 fi
-cat <<EOF>> /etc/HssPunya93/theme/red
+cat <<EOF>> /etc/kuhing/theme/red
 BG : \E[40;1;41m
 TEXT : \033[0;31m
 EOF
-cat <<EOF>> /etc/HssPunya93/theme/green
+cat <<EOF>> /etc/kuhing/theme/green
 BG : \E[40;1;42m
 TEXT : \033[0;32m
 EOF
-cat <<EOF>> /etc/HssPunya93/theme/yellow
+cat <<EOF>> /etc/kuhing/theme/yellow
 BG : \E[40;1;43m
 TEXT : \033[0;33m
 EOF
-cat <<EOF>> /etc/HssPunya93/theme/blue
+cat <<EOF>> /etc/kuhing/theme/blue
 BG : \E[40;1;44m
 TEXT : \033[0;34m
 EOF
-cat <<EOF>> /etc/HssPunya93/theme/magenta
+cat <<EOF>> /etc/kuhing/theme/magenta
 BG : \E[40;1;95m
 TEXT : \033[0;95m
 EOF
-cat <<EOF>> /etc/HssPunya93/theme/cyan
+cat <<EOF>> /etc/kuhing/theme/cyan
 BG : \E[40;1;46m
 TEXT : \033[0;36m
 EOF
-cat <<EOF>> /etc/HssPunya93/theme/color.conf
+cat <<EOF>> /etc/kuhing/theme/color.conf
 magenta
 EOF
 
