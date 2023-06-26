@@ -1,12 +1,12 @@
 #!/bin/bash
 # //====================================================
 # //	System Request:Debian 9+/Ubuntu 18.04+/20+
-# //	Author:	Tarap-Kuhing
+# //	Author:	Papada'an-Store
 # //	Dscription: Xray Menu Management
-# //	email: merahjambo@gmail.com
-# //  telegram: https://t.me/Baung2012
+# //	email: putrameratus2@gmail.com
+# //  telegram: https://t.me/Cibut2d
 # //====================================================
-# // font color configuration | TARAP KUHING AUTOSCRIPT
+# // font color configuration | PAPADA'AN STORE AUTOSCRIPT
 ateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -33,7 +33,7 @@ clear
 echo -e "\033[0;33m   ┌──────────────────────────────────────────┐\033[0m"
 echo -e "\033[0;33m   │\033[0m            \033[0;32mCHANGE DOMAIN VPS\033[0m             \033[0;33m|\033[0m"
 echo -e "\033[0;33m   └──────────────────────────────────────────┘\033[0m"
-echo -e "     ${RED}Autoscript Tarap Kuhing Tunneling (multi port)${NC}"
+echo -e "     ${RED}Autoscript Papada'an Store (multi port)${NC}"
 echo -e "${RED}Make sure the internet is smooth when installing the script${NC}"
 echo -e "───────────────────────────────────────────────────────"
 echo -e ""
