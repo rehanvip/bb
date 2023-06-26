@@ -20,7 +20,7 @@ BURIQ () {
     done
     rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps 
+# https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps 
 MYIP=$(curl -sS ipv4.icanhazip.com)
 Name=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
@@ -130,7 +130,7 @@ fi
 sleep 2
 rm -rf /etc/per
 mkdir -p /etc/{vmess,websocket,vless,trojan,shadowsocks}
-mkdir -p /etc/Tarap-Kuhing/public_html
+mkdir -p /etc/HssPunya93/public_html
 touch /etc/vmess/.vmess.db
 touch /etc/vless/.vless.db
 touch /etc/trojan/.trojan.db
@@ -150,19 +150,19 @@ mkdir -p /etc/dns
 mkdir -p /etc/slowdns
 touch /etc/slowdns/server.pub
 touch /etc/slowdns/server.key
-mkdir -p /etc/kuhing
-mkdir -p /etc/kuhing/theme
+mkdir -p /etc/HssPunya93
+mkdir -p /etc/HssPunya93/theme
 mkdir -p /var/lib >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 clear
 echo ""
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/v/main/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/HssPunya93/hss/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/v/main/api.sh;chmod +x api.sh;./api.sh
+wget -q https://raw.githubusercontent.com/HssPunya93/hss/main/api.sh;chmod +x api.sh;./api.sh
 clear
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/v/main/ssh/kuhing;chmod +x kuhing;./kuhing
-rm kuhing
+wget -q https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/HssPunya93;chmod +x HssPunya93;./HssPunya93
+rm HssPunya93
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
@@ -184,40 +184,40 @@ echo "IP=$pp" > /var/lib/ipvps.conf
 echo ""
 elif [[ $host == "2" ]]; then
 #install cf
-wget https://raw.githubusercontent.com/Tarap-Kuhing/v/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 else
 echo -e "Random Subdomain/Domain is used"
-wget https://raw.githubusercontent.com/Tarap-Kuhing/v/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 fi
-cat <<EOF>> /etc/kuhing/theme/red
+cat <<EOF>> /etc/HssPunya93/theme/red
 BG : \E[40;1;41m
 TEXT : \033[0;31m
 EOF
-cat <<EOF>> /etc/kuhing/theme/green
+cat <<EOF>> /etc/HssPunya93/theme/green
 BG : \E[40;1;42m
 TEXT : \033[0;32m
 EOF
-cat <<EOF>> /etc/kuhing/theme/yellow
+cat <<EOF>> /etc/HssPunya93/theme/yellow
 BG : \E[40;1;43m
 TEXT : \033[0;33m
 EOF
-cat <<EOF>> /etc/kuhing/theme/blue
+cat <<EOF>> /etc/HssPunya93/theme/blue
 BG : \E[40;1;44m
 TEXT : \033[0;34m
 EOF
-cat <<EOF>> /etc/kuhing/theme/magenta
+cat <<EOF>> /etc/HssPunya93/theme/magenta
 BG : \E[40;1;95m
 TEXT : \033[0;95m
 EOF
-cat <<EOF>> /etc/kuhing/theme/cyan
+cat <<EOF>> /etc/HssPunya93/theme/cyan
 BG : \E[40;1;46m
 TEXT : \033[0;36m
 EOF
-cat <<EOF>> /etc/kuhing/theme/color.conf
+cat <<EOF>> /etc/HssPunya93/theme/color.conf
 magenta
 EOF
 
@@ -227,21 +227,21 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Tarap-Kuhing/v/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #install Backup
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install BACKUP           $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Tarap-Kuhing/v/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/HssPunya93/hss/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green       Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Tarap-Kuhing/v/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/HssPunya93/hss/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 #install file
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -249,7 +249,7 @@ echo -e "$green      Install FILE                $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Tarap-Kuhing/v/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/HssPunya93/hss/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 #install slowdns
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -257,7 +257,7 @@ echo -e "$green      Install SLOWDNS                $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Tarap-Kuhing/v/main/wireguard/installsl.sh && chmod +x installsl.sh && ./installsl.sh
+wget https://raw.githubusercontent.com/HssPunya93/hss/main/wireguard/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 clear
 sleep 2
 #install ssh ohp
@@ -266,9 +266,9 @@ echo -e "$green       Install OHP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Tarap-Kuhing/v/main/OPENVPN/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/HssPunya93/hss/main/OPENVPN/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/v/main/ssh/notif.sh;chmod +x notif.sh;./notif.sh
+wget -q https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/notif.sh;chmod +x notif.sh;./notif.sh
 sleep 3
 clear
 #install limit xray
@@ -277,7 +277,7 @@ echo -e "$green       Install Limit Xray               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/v/main/ssh/limit.sh;chmod +x limit.sh;./limit.sh
+wget -q https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/limit.sh;chmod +x limit.sh;./limit.sh
 sleep 3
 clear
 cat> /root/.profile << END
@@ -305,7 +305,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/v/main/versi )
+serverV=$( curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/versi )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -317,7 +317,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ SCRIPT TARAP KUHING ]-===================="
+echo "=====================-[ SCRIPT PAPADA'AN STORE ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -358,7 +358,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Created By TARAP KUHING ]-==============="
+echo "===============-[ Script Created By PAPADA'AN STORE ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
