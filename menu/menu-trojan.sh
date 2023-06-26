@@ -11,7 +11,7 @@ WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps > /root/tmp
+    curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -29,7 +29,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -46,7 +46,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -172,8 +172,6 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks      ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}ISP          ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}City         ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Host/IP      ${COLOR1}: ${WH}${domain}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 ${NC} ${WH}Wildcard     ${COLOR1}: ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Port TLS     ${COLOR1}: ${WH}${tls}" | tee -a /etc/log-create-user.log
@@ -206,8 +204,6 @@ menu
 }
 function trial-trojan(){
 clear
-ISP=$(cat /etc/xray/isp)
-CITY=$(cat /etc/xray/city)
 author=$(cat /etc/profil)
 domain=$(cat /etc/xray/domain)
 TIMES="10"
@@ -238,8 +234,6 @@ TEXT="
 <code>──────────────────────</code>
 <code>Remarks      : </code> <code>${user}</code>
 <code>Domain       : </code> <code>${domain}</code>
-<code>City           : </code> <code>${CITY}</code>
-<code>ISP           : </code> <code>${ISP}</code>
 <code>Port TLS     : </code> <code>443</code>
 <code>Port GRPC    : </code> <code>443</code>
 <code>User ID      : </code> <code>${uuid}</code>
@@ -273,8 +267,6 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks      ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}ISP          ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}City         ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Host/IP      ${COLOR1}: ${WH}${domain}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 ${NC} ${WH}Wildcard     ${COLOR1}: ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Port TLS     ${COLOR1}: ${WH}${tls}" | tee -a /etc/log-create-user.log
@@ -359,7 +351,6 @@ TEXT="
 <b>   XRAY TROJAN RENEW</b>
 <code>◇━━━━━━━━━━━━━━◇</code>
 <b>DOMAIN   :</b> <code>${domain} </code>
-<b>ISP      :</b> <code>$ISP $CITY </code>
 <b>USERNAME :</b> <code>$user </code>
 <b>EXPIRED  :</b> <code>$exp4 </code>
 <code>◇━━━━━━━━━━━━━━◇</code>
@@ -484,7 +475,6 @@ TEXT="
 <b>         User Login</b>
 <code>◇━━━━━━━━━━━━━━◇</code>
 <b>DOMAIN :</b> <code>${domain} </code>
-<b>ISP AND CITY :</b> <code>$ISP $CITY </code>
 <b>USERNAME :</b> <code>$akun </code>
 <b>TOTAL IP :</b> <code>${jum2} </code>
 <code>◇━━━━━━━━━━━━━━◇</code>
@@ -562,8 +552,6 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks      ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}ISP          ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}City         ${COLOR1}: ${WH}$CITY" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Host/IP      ${COLOR1}: ${WH}${domain}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 ${NC} ${WH}Wildcard     ${COLOR1}: ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Port TLS     ${COLOR1}: ${WH}${tls}" | tee -a /etc/log-create-user.log
