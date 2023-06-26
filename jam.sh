@@ -34,7 +34,7 @@ echo -e "     ${green}Current : $aureb $gg ${NC}"
 echo -e ""
 echo -e " ${BICyan}└───────────────────────────────────────────────┘${NC}" 
 echo -e "${BICyan}┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "${BICyan}│${NC}             • Tarap-Kuhing •           ${BICyan}│$NC"
+echo -e "${BICyan}│${NC}             • PAPADA'AN STORE •           ${BICyan}│$NC"
 echo -e "${BICyan}└─────────────────────────────────────────────────┘${NC}"
 
 while :; do
