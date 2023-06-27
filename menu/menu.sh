@@ -228,7 +228,7 @@ echo -e "${BIYellow}□ Clients Name        = ${BICyan}${Name}${NC}"
 echo -e "${BIYellow}□ Expired Script VPS  = ${RED}${certificate} ${BIYellow}day${NC}"
 echo -e "${BIYellow}□ Time Reboot VPS     = ${BICyan}00:00 ${GREEN}( Jam 12 Malam )${NC}"
 echo -e "${BIYellow}□ WHATSAPP            = ${IPurple}{ ${BIWhite}081250851741 ${IPurple}}${NC}"
-echo -e "${BIYellow}□ AutoScript By = ${IPurple}( ${BICyan}PAPADA'AN ${BIYellow}STORE ${IPurple})${NC}"
+echo -e "${BIYellow}□ AutoScript By       = ${IPurple}( ${BICyan}PAPADA'AN ${BIYellow}STORE ${IPurple})${NC}"
 
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}PAPADA'AN ${BIYellow}STORE ${NC}"
