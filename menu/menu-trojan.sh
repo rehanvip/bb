@@ -204,7 +204,6 @@ menu
 }
 function trial-trojan(){
 clear
-author=$(cat /etc/profil)
 domain=$(cat /etc/xray/domain)
 TIMES="10"
 CHATID=$(cat /etc/per/id)
@@ -431,7 +430,6 @@ CITY=$(cat /etc/xray/city)
 domain=$(cat /etc/xray/domain)
 #systemctl restart xray
 #sleep 1
-author=$(cat /etc/profil)
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^#tr' | cut -d ' ' -f 2 | sort | uniq`);
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -532,7 +530,6 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#tr " "/etc/xray/config.json")
 clear
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
-author=$(cat /etc/profil)
 
 user=$(grep -E "^#tr " "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 domain=$(cat /etc/xray/domain)
@@ -583,7 +580,6 @@ read -n 1 -s -r -p "Press any key to back on menu"
 m-trojan
 }
 clear
-author=$(cat /etc/profil)
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}              ${WH}• MENU PANEL TROJAN •                  $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
