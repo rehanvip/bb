@@ -73,8 +73,6 @@ function add-vless(){
 clear
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
-author=
-
 TIMES="10"
 CHATID=$(cat /etc/per/id)
 KEY=$(cat /etc/per/token)
