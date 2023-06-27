@@ -252,7 +252,6 @@ menu
 function trial-vmess(){
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
-author=$(cat /etc/profil)
 
 TIMES="10"
 CHATID=$(cat /etc/per/id)
@@ -534,7 +533,6 @@ domain=$(cat /etc/xray/domain)
 #systemctl restart xray
 #sleep 1
 clear
-author=$(cat /etc/profil)
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^#vm' | cut -d ' ' -f 2 | sort | uniq`);
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
