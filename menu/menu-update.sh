@@ -20,7 +20,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/kuhinHssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -160,7 +160,7 @@ rm -rf add-vmess
 rm -rf menu-bckp
 
 cd /usr/bin
-wget -O menu-update "https://raw.githubusercontent.com/Tarap-Kuhing/v/main/menu/menu-update.sh"
+wget -O menu-update "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-update.sh"
 wget -O update "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/update.sh"
 wget -O menu "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu.sh"
 wget -O m-bot "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/m-bot.sh"
