@@ -97,7 +97,6 @@ portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
-author=$(cat /etc/profil)
 
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -314,7 +313,6 @@ portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
-author=$(cat /etc/profil)
 
 clear
 IP=$(curl -sS ifconfig.me);
@@ -624,7 +622,6 @@ portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
-author=$(cat /etc/profil)
 IP=$(curl -sS ifconfig.me);
 ossl=`cat /root/log-install.txt | grep -w "OpenVPN" | cut -f2 -d: | awk '{print $6}'`
 opensh=`cat /root/log-install.txt | grep -w "OpenSSH" | cut -f2 -d: | awk '{print $1}'`
@@ -776,7 +773,6 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
 domain=$(cat /etc/xray/domain)
-author=$(cat /etc/profil)
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}              ${WH}• SSH ACTIVE USERS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -1054,7 +1050,6 @@ read -n 1 -s -r -p "Press any key to back on menu"
 m-sshovpn
 }
 clear
-author=$(cat /etc/profil)
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SSH PANEL MENU •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
