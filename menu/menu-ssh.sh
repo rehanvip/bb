@@ -913,30 +913,7 @@ esac
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-function ceklim(){
 
-clear
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}         CEK USER MULTI SSH     ${NC}$COLOR1$NC"
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-if [ -e "/root/log-limit.txt" ]; then
-echo "User Who Violate The Maximum Limit";
-echo "Time - Username - Number of Multilogin"
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-cat /root/log-limit.txt
-else
-echo " No user has committed a violation"
-echo " "
-echo " or"
-echo " "
-echo " The user-limit script not been executed."
-fi
-echo " ";
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu-ssh
-}
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SSH PANEL MENU •              ${NC} $COLOR1 $NC"
@@ -944,9 +921,9 @@ echo -e "$COLOR1└────────────────────�
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
 $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD SSH         ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}MEMBER SSH${NC}$COLOR1 $NC
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
-$COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL SSH       ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}SET NOTIF MULTI LOGIN ${NC}    $COLOR1 $NC
+$COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL SSH       ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}NOTIF MULTI LOGIN ${NC}    $COLOR1 $NC
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
-$COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW SSH       ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}CEK AKUN MULTI LOGIN${NC} $COLOR1 $NC
+$COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW SSH       
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
 $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE SSH      
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
@@ -967,7 +944,6 @@ case $opt in
 05 | 5) clear ; cek ; exit ;;
 06 | 6) clear ; memberssh ; exit ;;
 07 | 7) clear ; autokill ; exit ;;
-08 | 8) clear ; ceklim ; exit ;;
 00 | 0) clear ; menu ; exit ;;
 X  | 0) clear ; menu-ssh ;;
 x) exit ;;
