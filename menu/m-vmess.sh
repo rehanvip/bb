@@ -107,7 +107,7 @@ clear
             echo ""
             echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
             read -n 1 -s -r -p "Press any key to back on menu"
-m-vmess
+menu-vmess
 		fi
 	done
 #read -p "   Bug Host : " address
@@ -439,7 +439,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vmg " "/etc/xray/config.json")
 	echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         echo ""
         read -n 1 -s -r -p "Press any key to back on menu"
-        m-vmess
+        menu-vmess
 	fi
  	echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         echo -e "$COLOR1 ${NC} ${COLBG1}            ⇱ Renew VMESS ⇲             ${NC} $COLOR1 $NC"
@@ -505,7 +505,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vmg " "/etc/xray/config.json")
 		echo ""
 		echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 		read -n 1 -s -r -p "Press any key to back on menu"
-        m-vmess
+        menu-vmess
 	fi
 
 	clear
@@ -538,7 +538,7 @@ systemctl restart xray > /dev/null 2>&1
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
-    m-vmess
+    menu-vmess
 }
 
 function cek-vmess(){
@@ -616,7 +616,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-m-vmess
+menu-vmess
 }
 function list-vmess(){
 clear
@@ -750,7 +750,7 @@ echo -e "$COLOR1 ${NC}   ${WH}• $author •${NC}                 $COLOR1 $NC" 
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
-m-vmess
+menu-vmess
 }
 clear
 
