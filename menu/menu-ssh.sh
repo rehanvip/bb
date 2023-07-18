@@ -919,17 +919,13 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SSH PANEL MENU •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
-$COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD SSH         ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}MEMBER SSH${NC}$COLOR1 $NC
+$COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD SSH         ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}MEMBER SSH${NC}$COLOR1 $NC
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
-$COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL SSH       ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}NOTIF MULTI LOGIN ${NC}    $COLOR1 $NC
+$COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL SSH       ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}CHECK LOGIN$NC
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
-$COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW SSH       
+$COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW SSH       ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}NOTIF MULTI LOGIN ${NC}    $COLOR1 $NC
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
-$COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE SSH      
-$COLOR1 $NC                                              ${NC} $COLOR1 $NC
-$COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CHECK LOGIN$NC
-$COLOR1 $NC                                              ${NC} $COLOR1 $NC
-$COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
+$COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE SSH      ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK ${NC}              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                 ${WH}• Rehan Vip •${NC}                 $COLOR1 $NC"
@@ -941,8 +937,8 @@ case $opt in
 02 | 2) clear ; trial ; exit ;;
 03 | 3) clear ; renew ; exit ;;
 04 | 4) clear ; hapuslama ; exit ;;
-05 | 5) clear ; cek ; exit ;;
-06 | 6) clear ; memberssh ; exit ;;
+05 | 5) clear ; memberssh ; exit ;;
+06 | 6) clear ; cek ; exit ;;
 07 | 7) clear ; autokill ; exit ;;
 00 | 0) clear ; menu ; exit ;;
 X  | 0) clear ; menu-ssh ;;
