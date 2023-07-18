@@ -372,7 +372,7 @@ TEXT="
 <code>OpenVPN TCP      : </code> https://$domen:81/tcp.ovpn
 <code>OpenVPN UDP      : </code> https://$domen:81/udp.ovpn
 <code>───────────────────</code>
-<code>           Rehan Vip                       </code>
+<code>       Rehan Vip                       </code>
 <code>───────────────────</code>
 "
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
@@ -488,7 +488,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/ssh")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}              ${WH}• RENEW USERS •             ${NC}$COLOR1$NC"
+echo -e "$COLOR1${NC}${COLBG1}                ${WH}• RENEW USER •             ${NC}$COLOR1$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo ""
@@ -500,7 +500,7 @@ read -n 1 -s -r -p "Press any key to back on menu"
 menu-ssh
 fi
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}              ${WH}• RENEW USERS •             ${NC}$COLOR1$NC"
+echo -e "$COLOR1${NC}${COLBG1}                ${WH}• RENEW USER •             ${NC}$COLOR1$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo ""
@@ -546,7 +546,7 @@ curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$T
 
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}              ${WH}• RENEW USERS •             ${NC}$COLOR1$NC"
+echo -e "$COLOR1${NC}${COLBG1}                ${WH}• RENEW USER •             ${NC}$COLOR1$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e ""
@@ -564,7 +564,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/ssh")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}              ${WH}• DELETE USERS •             ${NC}$COLOR1$NC"
+echo -e "$COLOR1${NC}${COLBG1}                ${WH}• DELETE USER •             ${NC}$COLOR1$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo ""
@@ -576,7 +576,7 @@ read -n 1 -s -r -p "Press any key to back on menu"
 menu-ssh
 fi
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}              ${WH}• DELETE USERS •             ${NC}$COLOR1$NC"
+echo -e "$COLOR1${NC}${COLBG1}                ${WH}• DELETE USER •             ${NC}$COLOR1$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo ""
@@ -732,7 +732,7 @@ echo -e "$COLOR1┌────────────────────�
 echo "Account number: $JUMLAH user"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}              ${WH}• DELETE USERS •             ${NC}$COLOR1$NC"
+echo -e "$COLOR1${NC}${COLBG1}                ${WH}• DELETE USERS •             ${NC}$COLOR1$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo ""
@@ -821,7 +821,7 @@ rm -f /tmp/vpn-login-tcp.txt
 rm -f /tmp/vpn-login-udp.txt
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}                       ${WH}• Rehan Vip •              ${NC}$COLOR1$NC"
+echo -e "$COLOR1${NC}${COLBG1}           ${WH}• Rehan Vip •              ${NC}$COLOR1$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
@@ -919,7 +919,7 @@ sts="${Error}"
 fi
 clear
 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "$COLOR1${NC}${COLBG1}             AUTOINFO LOGIN SSH          ${NC}$COLOR1$NC"
+echo -e "$COLOR1${NC}${COLBG1}    AUTO INFO LOGIN SSH          ${NC}$COLOR1$NC"
 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "Status Autokill : $sts        "
 echo -e ""
@@ -1050,7 +1050,7 @@ $COLOR1 $NC                                              ${NC} $COLOR1 $NC
 $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• Rehan Vip •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• Rehan Vip •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
