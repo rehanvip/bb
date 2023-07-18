@@ -3,7 +3,7 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps > /root/tmp
+    curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -21,7 +21,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -38,7 +38,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -68,7 +68,7 @@ echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• MENGGUNAKAN SCRIPT •      
 echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• PREMIUM DARI SAYA  •          ${NC} $COLOR1 $NC"
 echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• KALAU ADA KENDALA  •          ${NC} $COLOR1 $NC"
 echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• CHAT SAYA LEWAT WA •          ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}        ${WH}• https:/wa.me/+6281250851741 •      ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}        ${WH}• https:/wa.me/+6285789736278 •      ${NC} $COLOR1 $NC"
 echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌─────────────────────────────────────────────────┐${NC}"
 read -rp "  New ID CHAT TELEGRAM : " -e id
