@@ -128,7 +128,7 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Tarap-Kuhing/v/main/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 rm /etc/nginx/conf.d/vps.conf
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/SSH/vps.conf"
@@ -136,7 +136,7 @@ wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Tarap-Kuhi
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -212,7 +212,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/HssPunya93/hss/main/OPENVPN/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/rehanvip/pp/main/OPENVPN/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # // install lolcat
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/SSH/lolcat.sh &&  chmod +x lolcat.sh && ./lolcat.sh
@@ -249,13 +249,13 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 #install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/rehanvip/pp/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -277,70 +277,70 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 # menu
-wget -O menu-update "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-update.sh"
-wget -O update "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/update.sh"
-wget -O menu "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu.sh"
-wget -O m-bot "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/m-bot.sh"
-wget -O m-ip "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/m-ip.sh"
-wget -O menu-trial "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-trial.sh"
-wget -O menu-vmess "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-vmess.sh"
-wget -O menu-vless "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-vless.sh"
-wget -O running "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/clearcache.sh"
-wget -O menu-trgo "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-trgo.sh"
-wget -O menu-trojan "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-trojan.sh"
-wget -O menu-ssh "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-ssh.sh"
-wget -O usernew "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/trial.sh"
-wget -O renew "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/renew.sh"
-wget -O hapus "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/hapus.sh"
-wget -O cek "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/cek.sh"
-wget -O member "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/member.sh"
-wget -O delete "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/delete.sh"
-wget -O autokill "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/tendang.sh"
-wget -O menu-set "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-set.sh"
-wget -O menu-domain "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-domain.sh"
-wget -O add-host "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/add-host.sh"
-wget -O port-change "https://raw.githubusercontent.com/HssPunya93/hss/main/port/port-change.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/certv2ray.sh"
-wget -O menu-webmin "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-webmin.sh"
-wget -O speedtest "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/speedtest_cli.py"
-wget -O about "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/about.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/auto-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/restart.sh"
-wget -O bw "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/bw.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/HssPunya93/hss/main/port/port-ssl.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/HssPunya93/hss/main/port/port-ovpn.sh"
-wget -O xp "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/xp.sh"
-wget -O acs-set "https://raw.githubusercontent.com/HssPunya93/hss/main/acs-set.sh"
-wget -O sshws "https://raw.githubusercontent.com/HssPunya93/hss/main/ssh/sshws.sh"
-wget -O status "https://raw.githubusercontent.com/HssPunya93/hss/main/status.sh"
-wget -O menu-bckp "https://raw.githubusercontent.com/HssPunya93/hss/main/menu/menu-bckp.sh"
-wget -O backup "https://raw.githubusercontent.com/HssPunya93/hss/main/backup/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/HssPunya93/hss/main/backup/restore.sh"
-wget -O jam "https://raw.githubusercontent.com/HssPunya93/hss/main/jam.sh"
-wget -O add-ws "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/add-ws.sh"
-wget -O trialvmess "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/trialvmess.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/renew-ws.sh"
-wget -O del-ws "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/del-ws.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/cek-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/add-vless.sh"
-wget -O trialvless "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/trialvless.sh"
-wget -O renew-vless "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/renew-vless.sh"
-wget -O del-vless "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/del-vless.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/cek-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/add-tr.sh"
-wget -O trialtrojan "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/trialtrojan.sh"
-wget -O del-tr "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/del-tr.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/renew-tr.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/cek-tr.sh"
-wget -O addtrgo "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/addtrgo.sh"
-wget -O trialtrojango "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/trialtrojango.sh"
-wget -O deltrgo "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/deltrgo.sh"
-wget -O renewtrgo "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/renewtrgo.sh"
-wget -O cektrgo "https://raw.githubusercontent.com/HssPunya93/hss/main/xray/cektrgo.sh"
+wget -O menu-update "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-update.sh"
+wget -O update "https://raw.githubusercontent.com/rehanvip/pp/main/menu/update.sh"
+wget -O menu "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu.sh"
+wget -O m-bot "https://raw.githubusercontent.com/rehanvip/pp/main/menu/m-bot.sh"
+wget -O m-ip "https://raw.githubusercontent.com/rehanvip/pp/main/menu/m-ip.sh"
+wget -O menu-trial "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-trial.sh"
+wget -O menu-vmess "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-vmess.sh"
+wget -O menu-vless "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-vless.sh"
+wget -O running "https://raw.githubusercontent.com/rehanvip/pp/main/menu/running.sh"
+wget -O clearcache "https://raw.githubusercontent.com/rehanvip/pp/main/menu/clearcache.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-trgo.sh"
+wget -O menu-trojan "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-trojan.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-ssh.sh"
+wget -O usernew "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/trial.sh"
+wget -O renew "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/renew.sh"
+wget -O hapus "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/hapus.sh"
+wget -O cek "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/cek.sh"
+wget -O member "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/member.sh"
+wget -O delete "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/delete.sh"
+wget -O autokill "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/tendang.sh"
+wget -O menu-set "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-set.sh"
+wget -O menu-domain "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-domain.sh"
+wget -O add-host "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/add-host.sh"
+wget -O port-change "https://raw.githubusercontent.com/rehanvip/pp/main/port/port-change.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/rehanvip/pp/main/xray/certv2ray.sh"
+wget -O menu-webmin "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-webmin.sh"
+wget -O speedtest "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/speedtest_cli.py"
+wget -O about "https://raw.githubusercontent.com/rehanvip/pp/main/menu/about.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/rehanvip/pp/main/menu/auto-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/rehanvip/pp/main/menu/restart.sh"
+wget -O bw "https://raw.githubusercontent.com/rehanvip/pp/main/menu/bw.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/rehanvip/pp/main/port/port-ssl.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/rehanvip/pp/main/port/port-ovpn.sh"
+wget -O xp "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/xp.sh"
+wget -O acs-set "https://raw.githubusercontent.com/rehanvip/pp/main/acs-set.sh"
+wget -O sshws "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/sshws.sh"
+wget -O status "https://raw.githubusercontent.com/rehanvip/pp/main/status.sh"
+wget -O menu-bckp "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-bckp.sh"
+wget -O backup "https://raw.githubusercontent.com/rehanvip/pp/main/backup/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/rehanvip/pp/main/backup/restore.sh"
+wget -O jam "https://raw.githubusercontent.com/rehanvip/pp/main/jam.sh"
+wget -O add-ws "https://raw.githubusercontent.com/rehanvip/pp/main/xray/add-ws.sh"
+wget -O trialvmess "https://raw.githubusercontent.com/rehanvip/pp/main/xray/trialvmess.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/rehanvip/pp/main/xray/renew-ws.sh"
+wget -O del-ws "https://raw.githubusercontent.com/rehanvip/pp/main/xray/del-ws.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/rehanvip/pp/main/xray/cek-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/rehanvip/pp/main/xray/add-vless.sh"
+wget -O trialvless "https://raw.githubusercontent.com/rehanvip/pp/main/xray/trialvless.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/rehanvip/pp/main/xray/renew-vless.sh"
+wget -O del-vless "https://raw.githubusercontent.com/rehanvip/pp/main/xray/del-vless.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/rehanvip/pp/main/xray/cek-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/rehanvip/pp/main/xray/add-tr.sh"
+wget -O trialtrojan "https://raw.githubusercontent.com/rehanvip/pp/main/xray/trialtrojan.sh"
+wget -O del-tr "https://raw.githubusercontent.com/rehanvip/pp/main/xray/del-tr.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/rehanvip/pp/main/xray/renew-tr.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/rehanvip/pp/main/xray/cek-tr.sh"
+wget -O addtrgo "https://raw.githubusercontent.com/rehanvip/pp/main/xray/addtrgo.sh"
+wget -O trialtrojango "https://raw.githubusercontent.com/rehanvip/pp/main/xray/trialtrojango.sh"
+wget -O deltrgo "https://raw.githubusercontent.com/rehanvip/pp/main/xray/deltrgo.sh"
+wget -O renewtrgo "https://raw.githubusercontent.com/rehanvip/pp/main/xray/renewtrgo.sh"
+wget -O cektrgo "https://raw.githubusercontent.com/rehanvip/pp/main/xray/cektrgo.sh"
 chmod +x menu-update
 chmod +x update
 chmod +x menu
