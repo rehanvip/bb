@@ -6,7 +6,7 @@
 # //	email: putrameratus2@gmail.com
 # //  telegram: https://t.me/Cibut2d
 # //====================================================
-# // font color configuration | PAPADA'AN STORE AUTOSCRIPT
+# // font color configuration | REHAN VIP AUTOSCRIPT
 RED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
@@ -55,13 +55,13 @@ function add-domain() {
     menu
 }
 add-ns() {
-    DOMAINNS="ppnstore.xyz"
+    DOMAINNS="friendsteams.my.id"
     DAOMIN=$(cat /etc/xray/domain)
     SUB=$(tr </dev/urandom -dc a-z0-9 | head -c6)
     SUB_DOMAIN=${SUB}."ppnstore.xyz"
     NS_DOMAIN=ns.${SUB_DOMAIN}
-    CF_ID=putrameratus2@gmail.com
-    CF_KEY=69c3940d1896bc19698277104e783dab6cee4
+    CF_ID=ralzikri21@gmail.com
+    CF_KEY=ebdaf7136ace30fe9c57e957b93dab34f455e
     set -euo pipefail
     IP=$(wget -qO- ipinfo.io/ip)
     ZONE=$(
