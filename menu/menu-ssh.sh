@@ -231,7 +231,7 @@ echo -e "$COLOR1${NC}${WH}Payload WS :                  ${NC}" | tee -a /etc/log
 echo -e "$COLOR1${NC}${WH}GET ws://$domen/ HTTP/1.1[crlf]Host: bug.com[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1───────────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}${WH}• Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}${WH}   • Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 else
 
@@ -277,7 +277,7 @@ echo -e "$COLOR1${NC}${WH}Payload WS :                  ${NC}" | tee -a /etc/log
 echo -e "$COLOR1${NC}${WH}GET ws://$domen/ HTTP/1.1[crlf]Host: bug.com[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1───────────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}${WH}• Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}${WH}   • Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
@@ -422,7 +422,7 @@ echo -e "$COLOR1${NC}${WH}Payload WS :                  ${NC}" | tee -a /etc/log
 echo -e "$COLOR1${NC}${WH}GET ws://$domen/ HTTP/1.1[crlf]Host: bug.com[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1───────────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}${WH}• Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}${WH}   • Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 else
 
@@ -468,7 +468,7 @@ echo -e "$COLOR1${NC}${WH}Payload WS :                  ${NC}" | tee -a /etc/log
 echo -e "$COLOR1${NC}${WH}GET ws://$domen/ HTTP/1.1[crlf]Host: bug.com[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1───────────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}${WH}• Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}${WH}   • Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 fi
 echo ""
@@ -559,47 +559,46 @@ fi
 read -n 1 -s -r -p "Press any key to back on menu"
 menu-ssh
 }
-function hapus(){
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/ssh")
-if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+function hapuslama(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}                ${WH}• DELETE USER •             ${NC}$COLOR1$NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}                 ${WH}• MEMBER SSH •                 ${NC}$COLOR1$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo ""
-echo "  You have no existing clients!"
-echo ""
+echo "USERNAME          EXP DATE          STATUS"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu-ssh
-fi
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}                ${WH}• DELETE USER •             ${NC}$COLOR1$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo ""
-echo "  Select the existing client you want to Delete"
-echo "  Press CTRL+C to return"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-grep -E "^### " "/etc/xray/ssh" | cut -d ' ' -f 2-3 | nl -s ') '
-until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
-if [[ ${CLIENT_NUMBER} == '1' ]]; then
-read -rp "Select one client [1]: " CLIENT_NUMBER
+while read expired
+do
+AKUN="$(echo $expired | cut -d: -f1)"
+ID="$(echo $expired | grep -v nobody | cut -d: -f3)"
+exp="$(chage -l $AKUN | grep "Account expires" | awk -F": " '{print $2}')"
+status="$(passwd -S $AKUN | awk '{print $2}' )"
+if [[ $ID -ge 1000 ]]; then
+if [[ "$status" = "L" ]]; then
+printf "%-17s %2s %-17s %2s \n" "$AKUN" "$exp     " "LOCKED"
 else
-read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
+printf "%-17s %2s %-17s %2s \n" "$AKUN" "$exp     " "UNLOCKED"
 fi
-done
-Pengguna=$(grep -E "^### " "/etc/xray/ssh" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
-Days=$(grep -E "^### " "/etc/xray/ssh" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
-sed -i "/^### $Pengguna $Days/d" /etc/xray/ssh
+fi
+done < /etc/passwd
+JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo "Account number: $JUMLAH user"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1${NC}${COLBG1}                ${WH}• DELETE USERS •             ${NC}$COLOR1$NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo ""
+read -p "Username SSH to Delete : " Pengguna
+
 if getent passwd $Pengguna > /dev/null 2>&1; then
 userdel $Pengguna > /dev/null 2>&1
 echo -e "User $Pengguna was removed."
 else
 echo -e "Failure: User $Pengguna Not Exist."
 fi
+sed -i "/^### $Pengguna/d" /etc/xray/ssh
 read -n 1 -s -r -p "Press any key to back on menu"
 menu-ssh
 }
@@ -700,12 +699,12 @@ echo -e "$COLOR1${NC}${WH}Payload WS :                  ${NC}" | tee -a /etc/log
 echo -e "$COLOR1${NC}${WH}GET ws://$domen/ HTTP/1.1[crlf]Host: bug.com[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1───────────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}${WH}• Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}${WH}   • Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
 }
-function hapuslama(){
+function memberssh(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}                 ${WH}• MEMBER SSH •                 ${NC}$COLOR1$NC"
@@ -731,20 +730,6 @@ JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo "Account number: $JUMLAH user"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}                ${WH}• DELETE USERS •             ${NC}$COLOR1$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo ""
-read -p "Username SSH to Delete : " Pengguna
-
-if getent passwd $Pengguna > /dev/null 2>&1; then
-userdel $Pengguna > /dev/null 2>&1
-echo -e "User $Pengguna was removed."
-else
-echo -e "Failure: User $Pengguna Not Exist."
-fi
-sed -i "/^### $Pengguna/d" /etc/xray/ssh
 read -n 1 -s -r -p "Press any key to back on menu"
 menu-ssh
 }
@@ -824,86 +809,6 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1${NC}${COLBG1}           ${WH}• Rehan Vip •              ${NC}$COLOR1$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
-menu-ssh
-}
-
-
-function member(){
-clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}                 ${WH}• MEMBER SSH •                 ${NC}$COLOR1$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo "USERNAME          EXP DATE          STATUS"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-while read expired
-do
-AKUN="$(echo $expired | cut -d: -f1)"
-ID="$(echo $expired | grep -v nobody | cut -d: -f3)"
-exp="$(chage -l $AKUN | grep "Account expires" | awk -F": " '{print $2}')"
-status="$(passwd -S $AKUN | awk '{print $2}' )"
-if [[ $ID -ge 1000 ]]; then
-if [[ "$status" = "L" ]]; then
-printf "%-17s %2s %-17s %2s \n" "$AKUN" "$exp     " "LOCKED"
-else
-printf "%-17s %2s %-17s %2s \n" "$AKUN" "$exp     " "UNLOCKED"
-fi
-fi
-done < /etc/passwd
-JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo "Account number: $JUMLAH user"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-read -n 1 -s -r -p "Press any key to back on menu"
-
-menu-ssh
-}
-function delete(){
-clear
-$author
-hariini=`date +%d-%m-%Y`
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}               ${WH}• Auto Delete •              ${NC}$COLOR1$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo "                    Thank you for removing the EXPIRED USERS"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
-totalaccounts=`cat /tmp/expirelist.txt | wc -l`
-for((i=1; i<=$totalaccounts; i++ ))
-do
-tuserval=`head -n $i /tmp/expirelist.txt | tail -n 1`
-username=`echo $tuserval | cut -f1 -d:`
-userexp=`echo $tuserval | cut -f2 -d:`
-userexpireinseconds=$(( $userexp * 86400 ))
-tglexp=`date -d @$userexpireinseconds`
-tgl=`echo $tglexp |awk -F" " '{print $3}'`
-while [ ${#tgl} -lt 2 ]
-do
-tgl="0"$tgl
-done
-while [ ${#username} -lt 15 ]
-do
-username=$username" "
-done
-bulantahun=`echo $tglexp |awk -F" " '{print $2,$6}'`
-echo "echo "Expired- User : $username Expire at : $tgl $bulantahun"" >> /usr/local/bin/alluser
-todaystime=`date +%s`
-if [ $userexpireinseconds -ge $todaystime ] ;
-then
-:
-else
-echo "echo "Expired- Username : $username are expired at: $tgl $bulantahun and removed : $hariini "" >> /usr/local/bin/deleteduser
-echo "Username $username that are expired at $tgl $bulantahun removed from the VPS $hariini"
-userdel $username
-fi
-done
-echo " "
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}    ${WH}• Rehan Vip •              ${NC}$COLOR1$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-
 read -n 1 -s -r -p "Press any key to back on menu"
 menu-ssh
 }
@@ -1037,13 +942,13 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SSH PANEL MENU •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
-$COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD SSH         ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}MEMBER CONFIG${NC}     $COLOR1 $NC
+$COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD SSH         ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}MEMBER SSH${NC}$COLOR1 $NC
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
-$COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL SSH       ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}HAPUS AKUN LAMA${NC}$COLOR1 $NC
+$COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL SSH       ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}SET NOTIF MULTI LOGIN ${NC}    $COLOR1 $NC
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
-$COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW SSH       ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}SET NOTIF MULTI LOGIN ${NC}    $COLOR1 $NC
+$COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW SSH       ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}CEK AKUN MULTI LOGIN${NC} $COLOR1 $NC
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
-$COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE SSH      ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}CEK AKUN MULTI LOGIN${NC} $COLOR1 $NC
+$COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE SSH      
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
 $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CHECK LOGIN$NC
 $COLOR1 $NC                                              ${NC} $COLOR1 $NC
@@ -1058,12 +963,11 @@ case $opt in
 01 | 1) clear ; usernew ; exit ;;
 02 | 2) clear ; trial ; exit ;;
 03 | 3) clear ; renew ; exit ;;
-04 | 4) clear ; hapus ; exit ;;
+04 | 4) clear ; hapuslama ; exit ;;
 05 | 5) clear ; cek ; exit ;;
-06 | 6) clear ; cekconfig ; exit ;;
-07 | 7) clear ; hapuslama ; exit ;;
-08 | 8) clear ; autokill ; exit ;;
-09 | 9) clear ; ceklim ; exit ;;
+06 | 6) clear ; memberssh ; exit ;;
+07 | 7) clear ; autokill ; exit ;;
+08 | 8) clear ; ceklim ; exit ;;
 00 | 0) clear ; menu ; exit ;;
 X  | 0) clear ; menu-ssh ;;
 x) exit ;;
