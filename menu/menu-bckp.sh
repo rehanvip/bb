@@ -12,7 +12,7 @@ WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps > /root/tmp
+    curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -30,7 +30,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -47,7 +47,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -110,7 +110,7 @@ zip -rP $InputPass $NameUser.zip backup > /dev/null 2>&1
 ##############++++++++++++++++++++++++#############
 LLatest=`date`
 Get_Data () {
-git clone https://github.com/https://github.com/HssPunya93/userbackup.git /root/user-backup/ &> /dev/null
+git clone https://github.com/https://github.com/rehanvip/userbackup.git /root/user-backup/ &> /dev/null
 }
 
 Mkdir_Data () {
@@ -130,15 +130,15 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 
 Save_And_Exit () {
     cd /root/user-backup
-    git config --global user.email "putrameratus2@gmail.com" &> /dev/null
-    git config --global user.name "HssPunya93" &> /dev/null
+    git config --global user.email "vpsrehan@gmail.com" &> /dev/null
+    git config --global user.name "rehanvip" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m $NameUser &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/HssPunya93/userbackup.git
-    git push -f https://github.com/HssPunya93/userbackup.git &> /dev/null
+    git remote add origin https://github.com/rehanvip/userbackup.git
+    git push -f https://github.com/rehanvip/userbackup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -154,13 +154,13 @@ echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
 echo -e ""
 echo -e "$yellow COPY Username GITHUB DI BAWAH INI$NC"
 echo -e""
-echo -e "$yellow Username :👉  HssPunya93  👈$NC"
+echo -e "$yellow Username :👉  username git  👈$NC"
 echo -e""
 echo -e "$yellow PASTEKAN Username GITHUB DI BAWAH INI$NC"
 echo -e ""
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/HssPunya93/userbackup/main/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/rehanvip/userbackup/main/$NameUser/$NameUser.zip"
 sleep 1
 echo -e "[ ${red}INFO${NC} ] Backup done "
 sleep 1
@@ -196,7 +196,7 @@ function restore2(){
 cd
 read -rp "Enter Name File Your Backup  : " -e NameUser
 
-cekdata=$(curl -sS https://raw.githubusercontent.com/HssPunya93/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
+cekdata=$(curl -sS https://raw.githubusercontent.com/rehanvip/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
 
 [[ "$cekdata" = "404" ]] && {
 red "Data not found / you never backup"
@@ -209,7 +209,7 @@ echo -e "[ ${GREEN}INFO${NC} ] • Restore Data..."
 read -rp "Password File: " -e InputPass
 echo -e "[ ${GREEN}INFO${NC} ] • Downloading data.."
 mkdir -p /root/backup
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/HssPunya93/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
+wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/rehanvip/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Getting your data..."
 unzip -P $InputPass /root/backup/backup.zip &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Starting to restore data..."
@@ -282,7 +282,7 @@ echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• REHAN VIP •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
