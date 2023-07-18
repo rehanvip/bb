@@ -103,7 +103,7 @@ clear
 			echo "A client with the specified name was already created, please choose another name."
 			echo ""
 			read -n 1 -s -r -p "Press any key to back on menu"
-			m-vless
+			menu-vless
 		fi
 	done
 #read -p "   Bug SNI/Host : " sni
@@ -201,7 +201,7 @@ echo -e "$COLOR1 ${NC} ${WH}Expired On   ${COLOR1}: ${WH}$exp" | tee -a /etc/log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}   ${WH}• Papada'an Store •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}   ${WH}• Rehan Vip •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -309,7 +309,7 @@ echo -e "$COLOR1 ${NC} ${WH}Expired On   ${COLOR1}: ${WH}$exp" | tee -a /etc/log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}   ${WH}• Papada'an Store •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}   ${WH}• Rehan Vip •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -335,7 +335,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vl " "/etc/xray/config.json")
 		echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         echo ""
         read -n 1 -s -r -p "Press any key to back on menu"
-        m-vless
+        menu-vless
 	fi
  	echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
         echo -e "$COLOR1 ${NC} ${COLBG1}            ⇱ Renew VLESS ⇲             ${NC} $COLOR1 $NC"
@@ -387,7 +387,7 @@ systemctl restart xray > /dev/null 2>&1
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
-    m-vless
+    menu-vless
 }
 function del-vless(){
 clear
@@ -401,7 +401,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vl " "/etc/xray/config.json")
 		echo ""
 		echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 		read -n 1 -s -r -p "Press any key to back on menu"
-        m-vless
+        menu-vless
 	fi
 
 	clear
@@ -435,7 +435,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vl " "/etc/xray/config.json")
     echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
-    m-vless
+    menu-vless
 }
 
 function cek-vless(){
@@ -506,11 +506,11 @@ done
 rm -rf /tmp/other.txt
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}               ${WH}• Papada'an Store •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}               ${WH}• Rehan Vip •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-m-vless
+menu-vless
 }
 function list-vless(){
 clear
@@ -526,7 +526,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vl " "/etc/xray/config.json")
 		echo ""
 		echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
                 read -n 1 -s -r -p "Press any key to back on menu"
-        m-vless
+        menu-vless
 	fi
 
 	echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
@@ -600,10 +600,10 @@ echo -e "$COLOR1 ${NC} ${WH}Expired On   ${COLOR1}: ${WH}$exp" | tee -a /etc/log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}   ${WH}• Papada'an Store •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}   ${WH}• Rehan Vip •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
-m-vless
+menu-vless
 }
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -619,7 +619,7 @@ echo -e " $COLOR1 $NC                                              ${NC} $COLOR1
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• Papada'an Store •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• Rehan Vip •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
@@ -632,5 +632,5 @@ case $opt in
 6) clear ; list-vless ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
-*) echo "salah tekan " ; sleep 1 ; m-vless ;;
+*) echo "salah tekan " ; sleep 1 ; x ;;
 esac
