@@ -12,7 +12,7 @@ WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps > /root/tmp
+    curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -30,7 +30,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -47,7 +47,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/HssPunya93/hss/main/ipvps | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -723,7 +723,7 @@ echo -e "$COLOR1 ${NC}  ${WH}           Payload WS                   ${NC}" | te
 echo -e "$COLOR1${NC}${WH}GET ws://$domen/ HTTP/1.1[crlf]Host: bug.com[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}    ${WH}• Papada'an Store •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}    ${WH}• Rehan Vip •${NC}                 $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
@@ -769,7 +769,7 @@ else
 fi
 sed -i "/^### $Pengguna/d" /etc/xray/ssh
 read -n 1 -s -r -p "Press any key to back on menu"
-m-sshovpn
+menu-ssh
 }
 function cek(){
 TIMES="10"
@@ -844,11 +844,11 @@ rm -f /tmp/vpn-login-tcp.txt
 rm -f /tmp/vpn-login-udp.txt
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1${NC}${COLBG1}                       ${WH}• Papada'an Store •              ${NC}$COLOR1$NC"
+echo -e "$COLOR1${NC}${COLBG1}                       ${WH}• Rehan Vip •              ${NC}$COLOR1$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-m-sshovpn
+menu-ssh
 }
 
 
@@ -924,11 +924,11 @@ $author
                done
                echo " "
                echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-               echo -e "$COLOR1${NC}${COLBG1}                       ${WH}• Papada'an Store •              ${NC}$COLOR1$NC"
+               echo -e "$COLOR1${NC}${COLBG1}                       ${WH}• Rehan vip •              ${NC}$COLOR1$NC"
                echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 
                read -n 1 -s -r -p "Press any key to back on menu"
-               m-sshovpn
+               menu-ssh
 }
 function autokill(){
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
@@ -1073,7 +1073,7 @@ echo -e " $COLOR1┌────────────────────
  $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• Papada'an Store •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• Rehan vip •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
