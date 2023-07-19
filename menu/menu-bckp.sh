@@ -79,7 +79,7 @@ date=$(date +"%Y-%m-%d")
 
 clear
 echo -e "[ ${green}INFO${NC} ] Create password for database"
-#read -rp "Enter Token (Contact Tarap-Kuhing) : " -e token
+#read -rp "Enter Token (Contact Rehan) : " -e token
 read -rp "Enter Name File Your Backup  : " -e NameUser
 read -rp "Enter password : " -e InputPass
 sleep 1
@@ -154,7 +154,7 @@ echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
 echo -e ""
 echo -e "$yellow COPY Username GITHUB DI BAWAH INI$NC"
 echo -e""
-echo -e "$yellow Username :👉  username git  👈$NC"
+echo -e "$yellow Username :👉  Usergithub  👈$NC"
 echo -e""
 echo -e "$yellow PASTEKAN Username GITHUB DI BAWAH INI$NC"
 echo -e ""
@@ -282,7 +282,7 @@ echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• REHAN VIP •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
