@@ -161,10 +161,9 @@ clear
 clear
 clear
 systemctl restart xray > /dev/null 2>&1
-echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• XRAY VLESS PREMIUM •               ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} "
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}       ${COLBG1}${WH}   • XRAY VLESS •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks      ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}ISP          ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
@@ -262,10 +261,9 @@ curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$T
 
 clear
 systemctl restart xray > /dev/null 2>&1
-echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• XRAY VLESS PREMIUM •               ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} "
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}       ${COLBG1}${WH}   • XRAY VLESS •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks      ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}ISP          ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
@@ -546,10 +544,9 @@ clear
 clear
 clear
 clear
-echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• XRAY VLESS PREMIUM •               ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} "
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}       ${COLBG1}${WH}   • XRAY VLESS •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks      ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}ISP          ${COLOR1}: ${WH}$ISP" | tee -a /etc/log-create-user.log
