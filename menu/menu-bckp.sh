@@ -79,7 +79,7 @@ date=$(date +"%Y-%m-%d")
 
 clear
 echo -e "[ ${green}INFO${NC} ] Create password for database"
-#read -rp "Enter Token (Contact Rehan) : " -e token
+#read -rp "Enter Token (Contact Tarap-Kuhing) : " -e token
 read -rp "Enter Name File Your Backup  : " -e NameUser
 read -rp "Enter password : " -e InputPass
 sleep 1
@@ -110,7 +110,7 @@ zip -rP $InputPass $NameUser.zip backup > /dev/null 2>&1
 ##############++++++++++++++++++++++++#############
 LLatest=`date`
 Get_Data () {
-git clone https://github.com/https://github.com/rehanvip/userbackup.git /root/user-backup/ &> /dev/null
+git clone https://github.com/rehanvip/userbackup.git /root/user-backup/ &> /dev/null
 }
 
 Mkdir_Data () {
@@ -154,7 +154,7 @@ echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
 echo -e ""
 echo -e "$yellow COPY Username GITHUB DI BAWAH INI$NC"
 echo -e""
-echo -e "$yellow Username :👉  Usergithub  👈$NC"
+echo -e "$yellow Username :👉  bagusid93  👈$NC"
 echo -e""
 echo -e "$yellow PASTEKAN Username GITHUB DI BAWAH INI$NC"
 echo -e ""
