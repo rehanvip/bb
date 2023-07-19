@@ -162,7 +162,7 @@ clear
 clear
 systemctl restart xray > /dev/null 2>&1
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}    ${COLBG1}    ${WH}• XRAY VLESS PREMIUM •               ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• XRAY VLESS PREMIUM •               ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
@@ -181,7 +181,7 @@ echo -e "$COLOR1 ${NC} ${WH}Path         ${COLOR1}: ${WH}/vless" | tee -a /etc/l
 echo -e "$COLOR1 ${NC} ${WH}Path         ${COLOR1}: ${WH}vless-grpc" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket TLS      ${WH}:${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1${NC}${WH}${vlesslink1}${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
@@ -267,7 +267,7 @@ curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$T
 clear
 systemctl restart xray > /dev/null 2>&1
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}    ${COLBG1}    ${WH}• XRAY VLESS PREMIUM •               ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• XRAY VLESS PREMIUM •               ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
@@ -286,7 +286,7 @@ echo -e "$COLOR1 ${NC} ${WH}Path         ${COLOR1}: ${WH}/vless" | tee -a /etc/l
 echo -e "$COLOR1 ${NC} ${WH}Path         ${COLOR1}: ${WH}vless-grpc" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket TLS      ${WH}:${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1${NC}${WH}${vlesslink1}${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
@@ -555,7 +555,7 @@ clear
 clear
 clear
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}    ${COLBG1}    ${WH}• XRAY VLESS PREMIUM •               ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• XRAY VLESS PREMIUM •               ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
@@ -574,7 +574,7 @@ echo -e "$COLOR1 ${NC} ${WH}Path         ${COLOR1}: ${WH}/vless" | tee -a /etc/l
 echo -e "$COLOR1 ${NC} ${WH}Path         ${COLOR1}: ${WH}vless-grpc" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket TLS      ${WH}:${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1${NC}${WH}${vlesslink1}${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}"
