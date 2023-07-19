@@ -276,7 +276,7 @@ case $opt in
 4) clear ; menu-trojan ;;
 5) clear ; menu-ssws ;;
 6) clear ; menu-trial ;;
-7) clear ; menu-backup ;;
+7) clear ; menu-bckp ;;
 8) clear ; menu-set ;;
 9) clear ; running ;;
 10) clear ; jam ;;
