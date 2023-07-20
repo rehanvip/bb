@@ -165,7 +165,7 @@ TEXT="
 <code>Port SSH UDP     : </code> <code>1-65535</code>
 <code>Port SSH WS     : </code> <code>80, 8080</code>
 <code>Port SSH SSL WS : </code> <code>$wsssl</code>
-<code>Port SSL/TLS     : </code> <code>8443,8880</code>
+<code>Port SSL/TLS     : </code> <code>445,777</code>
 <code>Port OVPN WS SSL : </code> <code>2086</code>
 <code>Port OVPN SSL    : </code> <code>990</code>
 <code>Port OVPN TCP    : </code> <code>$ovpn</code>
@@ -204,7 +204,7 @@ echo -e "$COLOR1 $NC${WH}Port Dropbear   ${COLOR1}: ${WH}$db" | tee -a /etc/log-
 echo -e "$COLOR1 $NC${WH}Port SSH-UDP    ${COLOR1}: ${WH}1-65535" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port SSH-SSL-WS ${COLOR1}: ${WH}$wsssl" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC${WH}Port SSL/TLS    ${COLOR1}: ${WH}8443,8880" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC${WH}Port SSL/TLS    ${COLOR1}: ${WH}445,777" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port Ovpn Ws    ${COLOR1}: ${WH}2086" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port TCP   ${COLOR1}: ${WH}$ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port UDP   ${COLOR1}: ${WH}$ovpn2,1-2288" | tee -a /etc/log-create-user.log
@@ -250,7 +250,7 @@ echo -e "$COLOR1 $NC${WH}Port Dropbear   ${COLOR1}: ${WH}$db" | tee -a /etc/log-
 echo -e "$COLOR1 $NC${WH}Port SSH-UDP    ${COLOR1}: ${WH}1-65535" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port SSH-SSL-WS ${COLOR1}: ${WH}$wsssl" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC${WH}Port SSL/TLS    ${COLOR1}: ${WH}8443,8880" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC${WH}Port SSL/TLS    ${COLOR1}: ${WH}445,777" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port Ovpn Ws    ${COLOR1}: ${WH}2086" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port TCP   ${COLOR1}: ${WH}$ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port UDP   ${COLOR1}: ${WH}$ovpn2,1-2288" | tee -a /etc/log-create-user.log
@@ -357,7 +357,7 @@ TEXT="
 <code>Port SSH UDP         : </code> <code>1-65535</code>
 <code>Port SSH WS     : </code> <code>80, 8080</code>
 <code>Port SSH SSL WS : </code> <code>$wsssl</code>
-<code>Port SSL/TLS     : </code> <code>8443,8880</code>
+<code>Port SSL/TLS     : </code> <code>445,777</code>
 <code>Port OVPN WS SSL : </code> <code>2086</code>
 <code>Port OVPN SSL    : </code> <code>990</code>
 <code>Port OVPN TCP    : </code> <code>$ovpn</code>
@@ -395,7 +395,7 @@ echo -e "$COLOR1 $NC${WH}Port Dropbear   ${COLOR1}: ${WH}$db" | tee -a /etc/log-
 echo -e "$COLOR1 $NC${WH}Port SSH-UDP    ${COLOR1}: ${WH}1-65535" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port SSH-SSL-WS ${COLOR1}: ${WH}$wsssl" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC${WH}Port SSL/TLS    ${COLOR1}: ${WH}8443,8880" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC${WH}Port SSL/TLS    ${COLOR1}: ${WH}445,777" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port Ovpn Ws    ${COLOR1}: ${WH}2086" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port TCP   ${COLOR1}: ${WH}$ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port UDP   ${COLOR1}: ${WH}$ovpn2,1-2288" | tee -a /etc/log-create-user.log
@@ -441,7 +441,7 @@ echo -e "$COLOR1 $NC${WH}Port Dropbear   ${COLOR1}: ${WH}$db" | tee -a /etc/log-
 echo -e "$COLOR1 $NC${WH}Port SSH-UDP    ${COLOR1}: ${WH}1-65535" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port SSH-SSL-WS ${COLOR1}: ${WH}$wsssl" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC${WH}Port SSL/TLS    ${COLOR1}: ${WH}8443,8880" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC${WH}Port SSL/TLS    ${COLOR1}: ${WH}445,777" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port Ovpn Ws    ${COLOR1}: ${WH}2086" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port TCP   ${COLOR1}: ${WH}$ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port UDP   ${COLOR1}: ${WH}$ovpn2,1-2288" | tee -a /etc/log-create-user.log
@@ -672,7 +672,7 @@ echo -e "$COLOR1 $NC${WH}Port Dropbear   ${COLOR1}: ${WH}$db" | tee -a /etc/log-
 echo -e "$COLOR1 $NC${WH}Port SSH-UDP    ${COLOR1}: ${WH}1-65535" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port SSH-SSL-WS ${COLOR1}: ${WH}$wsssl" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC${WH}Port SSL/TLS    ${COLOR1}: ${WH}8443,8880" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC${WH}Port SSL/TLS    ${COLOR1}: ${WH}445,777" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port Ovpn Ws    ${COLOR1}: ${WH}2086" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port TCP   ${COLOR1}: ${WH}$ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Port UDP   ${COLOR1}: ${WH}$ovpn2,1-2288" | tee -a /etc/log-create-user.log
@@ -943,5 +943,5 @@ case $opt in
 00 | 0) clear ; menu ; exit ;;
 X  | 0) clear ; menu-ssh ;;
 x) exit ;;
-*) echo "Anda salah tekan " ; sleep 1 ; x ;;
+*) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
