@@ -277,8 +277,8 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 # menu
-wget -O menu-update "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-update.sh"
-wget -O update "https://raw.githubusercontent.com/rehanvip/bb/main/menu/update.sh"
+wget -O menu-update "https://raw.githubusercontent.com/rehanvip/update/main/menu/menu-update.sh"
+wget -O update "https://raw.githubusercontent.com/rehanvip/update/main/menu/update.sh"
 wget -O menu "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu.sh"
 wget -O m-bot "https://raw.githubusercontent.com/rehanvip/bb/main/menu/m-bot.sh"
 wget -O m-ip "https://raw.githubusercontent.com/rehanvip/bb/main/menu/m-ip.sh"
