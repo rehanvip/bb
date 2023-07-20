@@ -2,25 +2,10 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps > /root/tmp
-    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
-    for user in "${data[@]}"
-    do
-    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
-    d1=(`date -d "$exp" +%s`)
-    d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
-    if [[ "$exp2" -le "0" ]]; then
-    echo $user > /etc/.$user.ini
-    else
-    rm -f /etc/.$user.ini > /dev/null 2>&1
-    fi
-    done
-    rm -f /root/tmp
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/rehanvip/ip/main/vps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -37,7 +22,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/rehanvip/ip/main/vps | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -64,7 +49,7 @@ fi
 clear
 echo ""
 version=$(cat /home/ver)
-ver=$( curl sS https://raw.githubusercontent.com/rehanvip/pp/main/versi )
+ver=$( curl sS https://raw.githubusercontent.com/rehanvip/bb/main/versi )
 clear
 # CEK UPDATE
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
@@ -72,7 +57,7 @@ Info1="${Green_font_prefix}($version)${Font_color_suffix}"
 Info2="${Green_font_prefix}(LATEST VERSION)${Font_color_suffix}"
 Error="Version ${Green_font_prefix}[$ver]${Font_color_suffix} available${Red_font_prefix}[Please Update]${Font_color_suffix}"
 version=$(cat /home/ver)
-new_version=$( curl sS https://raw.githubusercontent.com/rehanvip/pp/main/versi | grep $version )
+new_version=$( curl sS https://raw.githubusercontent.com/rehanvip/bb/main/versi | grep $version )
 #Status Version
 if [ $version = $new_version ]; then
 sts="${Info2}"
@@ -160,53 +145,53 @@ rm -rf add-vmess
 rm -rf menu-bckp
 
 cd /usr/bin
-wget -O menu-update "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-update.sh"
-wget -O update "https://raw.githubusercontent.com/rehanvip/pp/main/menu/update.sh"
-wget -O menu "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu.sh"
-wget -O m-bot "https://raw.githubusercontent.com/rehanvip/pp/main/menu/m-bot.sh"
-wget -O m-ip "https://raw.githubusercontent.com/rehanvip/pp/main/menu/m-ip.sh"
-wget -O menu-trial "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-trial.sh"
-wget -O menu-vmess "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-vmess.sh"
-wget -O menu-vless "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-vless.sh"
-wget -O menu-ssws "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-ssws.sh"
-wget -O running "https://raw.githubusercontent.com/rehanvip/pp/main/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/rehanvip/pp/main/menu/clearcache.sh"
-wget -O menu-trgo "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-trgo.sh"
-wget -O menu-trojan "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-trojan.sh"
-wget -O menu-ssh "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-ssh.sh"
-wget -O menu-set "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-set.sh"
-wget -O menu-domain "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-domain.sh"
-wget -O add-host "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/add-host.sh"
-wget -O port-change "https://raw.githubusercontent.com/rehanvip/pp/main/port/port-change.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/rehanvip/pp/main/xray/certv2ray.sh"
-wget -O menu-webmin "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-webmin.sh"
-wget -O speedtest "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/speedtest_cli.py"
-wget -O about "https://raw.githubusercontent.com/rehanvip/pp/main/menu/about.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/rehanvip/pp/main/menu/auto-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/rehanvip/pp/main/menu/restart.sh"
-wget -O bw "https://raw.githubusercontent.com/rehanvip/pp/main/menu/bw.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/rehanvip/pp/main/port/port-ssl.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/rehanvip/pp/main/port/port-ovpn.sh"
-wget -O xp "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/xp.sh"
-wget -O acs-set "https://raw.githubusercontent.com/rehanvip/pp/main/acs-set.sh"
-wget -O sshws "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/sshws.sh"
-wget -O status "https://raw.githubusercontent.com/rehanvip/pp/main/status.sh"
-wget -O menu-backup "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-backup.sh"
-wget -O backup "https://raw.githubusercontent.com/rehanvip/pp/main/backup/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/rehanvip/pp/main/backup/restore.sh"
-wget -O jam "https://raw.githubusercontent.com/rehanvip/pp/main/jam.sh"
-wget -O trialvmess "https://raw.githubusercontent.com/rehanvip/pp/main/xray/trialvmess.sh"
-wget -O trialvless "https://raw.githubusercontent.com/rehanvip/pp/main/xray/trialvless.sh"
-wget -O trialtrojan "https://raw.githubusercontent.com/rehanvip/pp/main/xray/trialtrojan.sh"
-wget -O addtrgo "https://raw.githubusercontent.com/rehanvip/pp/main/xray/addtrgo.sh"
-wget -O trialtrojango "https://raw.githubusercontent.com/rehanvip/pp/main/xray/trialtrojango.sh"
-wget -O deltrgo "https://raw.githubusercontent.com/rehanvip/pp/main/xray/deltrgo.sh"
-wget -O renewtrgo "https://raw.githubusercontent.com/rehanvip/pp/main/xray/renewtrgo.sh"
-wget -O cektrgo "https://raw.githubusercontent.com/rehanvip/pp/main/xray/cektrgo.sh"
-wget -O cf "https://raw.githubusercontent.com/rehanvip/pp/main/ssh/cf.sh"
-wget -O menu-bckp "https://raw.githubusercontent.com/rehanvip/pp/main/menu/menu-bckp.sh"
-wget -O add-ssws "https://raw.githubusercontent.com/rehanvip/pp/main/xray/add-ssws.sh"
-wget -O add-v2ray "https://raw.githubusercontent.com/rehanvip/pp/main/xray/add-v2ray.sh"
+wget -O menu-update "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-update.sh"
+wget -O update "https://raw.githubusercontent.com/rehanvip/bb/main/menu/update.sh"
+wget -O menu "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu.sh"
+wget -O m-bot "https://raw.githubusercontent.com/rehanvip/bb/main/menu/m-bot.sh"
+wget -O m-ip "https://raw.githubusercontent.com/rehanvip/bb/main/menu/m-ip.sh"
+wget -O menu-trial "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-trial.sh"
+wget -O menu-vmess "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-vmess.sh"
+wget -O menu-vless "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-vless.sh"
+wget -O menu-ssws "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-ssws.sh"
+wget -O running "https://raw.githubusercontent.com/rehanvip/bb/main/menu/running.sh"
+wget -O clearcache "https://raw.githubusercontent.com/rehanvip/bb/main/menu/clearcache.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-trgo.sh"
+wget -O menu-trojan "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-trojan.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-ssh.sh"
+wget -O menu-set "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-set.sh"
+wget -O menu-domain "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-domain.sh"
+wget -O add-host "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/add-host.sh"
+wget -O port-change "https://raw.githubusercontent.com/rehanvip/bb/main/port/port-change.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/rehanvip/bb/main/xray/certv2ray.sh"
+wget -O menu-webmin "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-webmin.sh"
+wget -O speedtest "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/speedtest_cli.py"
+wget -O about "https://raw.githubusercontent.com/rehanvip/bb/main/menu/about.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/rehanvip/bb/main/menu/auto-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/rehanvip/bb/main/menu/restart.sh"
+wget -O bw "https://raw.githubusercontent.com/rehanvip/bb/main/menu/bw.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/rehanvip/bb/main/port/port-ssl.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/rehanvip/bb/main/port/port-ovpn.sh"
+wget -O xp "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/xp.sh"
+wget -O acs-set "https://raw.githubusercontent.com/rehanvip/bb/main/acs-set.sh"
+wget -O sshws "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/sshws.sh"
+wget -O status "https://raw.githubusercontent.com/rehanvip/bb/main/status.sh"
+wget -O menu-backup "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-backup.sh"
+wget -O backup "https://raw.githubusercontent.com/rehanvip/bb/main/backup/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/rehanvip/bb/main/backup/restore.sh"
+wget -O jam "https://raw.githubusercontent.com/rehanvip/bb/main/jam.sh"
+wget -O trialvmess "https://raw.githubusercontent.com/rehanvip/bb/main/xray/trialvmess.sh"
+wget -O trialvless "https://raw.githubusercontent.com/rehanvip/bb/main/xray/trialvless.sh"
+wget -O trialtrojan "https://raw.githubusercontent.com/rehanvip/bb/main/xray/trialtrojan.sh"
+wget -O addtrgo "https://raw.githubusercontent.com/rehanvip/bb/main/xray/addtrgo.sh"
+wget -O trialtrojango "https://raw.githubusercontent.com/rehanvip/bb/main/xray/trialtrojango.sh"
+wget -O deltrgo "https://raw.githubusercontent.com/rehanvip/bb/main/xray/deltrgo.sh"
+wget -O renewtrgo "https://raw.githubusercontent.com/rehanvip/bb/main/xray/renewtrgo.sh"
+wget -O cektrgo "https://raw.githubusercontent.com/rehanvip/bb/main/xray/cektrgo.sh"
+wget -O cf "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/cf.sh"
+wget -O menu-bckp "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-bckp.sh"
+wget -O add-ssws "https://raw.githubusercontent.com/rehanvip/bb/main/xray/add-ssws.sh"
+wget -O add-v2ray "https://raw.githubusercontent.com/rehanvip/bb/main/xray/add-v2ray.sh"
 
 
 chmod +x menu-update
@@ -261,7 +246,7 @@ clear
 echo -e ""
 echo -e "\e[0;32mDownloaded successfully!\e[0m"
 echo ""
-ver=$( curl sS https://raw.githubusercontent.com/rehanvip/hss/main/versi )
+ver=$( curl sS https://raw.githubusercontent.com/rehanvip/bb/main/versi )
 sleep 1
 echo -e "\e[0;32mPatching New Update, Please Wait...\e[0m"
 echo ""
