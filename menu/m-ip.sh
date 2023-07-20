@@ -120,7 +120,7 @@ read -p "   NEW IPVPS : " daftar
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
-REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/pp/main/ipvps | awk '{print $4}' | grep $daftar)
+REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/ip/main/vps | awk '{print $4}' | grep $daftar)
 if [[ $daftar = $REQIP ]]; then
 echo -e "$COLOR1 ${NC}  [INFO] VPS IP Already Registered!!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -189,7 +189,7 @@ exp=$(date -d "$exp days" +"%Y-%m-%d")
 hariini=$(date -d "0 days" +"%Y-%m-%d")
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/pp.git &> /dev/null
+git clone https://github.com/${USERGIT}/ip.git &> /dev/null
 cd /root/pp/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
@@ -203,12 +203,12 @@ IPVPS       : $daftar
 Reg Date    : $hariini
 "
 #echo "${TEXT}" >>/root/tarap/newuser
-echo "### $client $exp $daftar $isadmin" >>/root/pp/ipvps
+echo "### $client $exp $daftar $isadmin" >>/root/ip/vps
 git add .
 git commit -m register &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/${USERGIT}/pp.git &> /dev/null
-git push -f https://${APIGIT}@github.com/${USERGIT}/pp.git &> /dev/null
+git remote add origin https://github.com/${USERGIT}/ip.git &> /dev/null
+git push -f https://${APIGIT}@github.com/${USERGIT}/ip.git &> /dev/null
 sleep 1
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -237,7 +237,7 @@ clear
 rm -rf /root/ip &> /dev/null
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/pp.git &> /dev/null
+git clone https://github.com/${USERGIT}/ip.git &> /dev/null
 cd /root/pp/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
@@ -247,7 +247,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}                 ${WH}• DELETE IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 2-4 | nl -s '. '
+grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 2-4 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
@@ -270,23 +270,23 @@ read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
 fi
 
-name1=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 2 | sed -n "$nombor"p) #name
-exp=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 3 | sed -n "$nombor"p) #exp
-ivps1=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 4 | sed -n "$nombor"p) #ip
-sed -i "s/### $name1 $exp $ivps1//g" /root/pp/ipvps &> /dev/null
+name1=$(grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 2 | sed -n "$nombor"p) #name
+exp=$(grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 3 | sed -n "$nombor"p) #exp
+ivps1=$(grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 4 | sed -n "$nombor"p) #ip
+sed -i "s/### $name1 $exp $ivps1//g" /root/ip/vps &> /dev/null
 hariini2=$(date -d "0 days" +"%Y-%m-%d")
 TEXTD="
 Name     : $name1
 IPVPS    : $ivps1
 Status   : Deleted on  $hariini2
 "
-echo "${TEXTD}" >>/root/pp/delete_log  &> /dev/null
+echo "${TEXTD}" >>/root/ip/delete_log  &> /dev/null
 
 git add . &> /dev/null
 git commit -m remove &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/${USERGIT}/pp.git &> /dev/null
-git push -f https://${APIGIT}@github.com/${USERGIT}/pp.git &> /dev/null
+git remote add origin https://github.com/${USERGIT}/ip.git &> /dev/null
+git push -f https://${APIGIT}@github.com/${USERGIT}/ip.git &> /dev/null
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
