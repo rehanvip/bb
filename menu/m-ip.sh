@@ -115,7 +115,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-rm -rf /root/ip
+rm -rf /root/pp
 read -p "   NEW IPVPS : " daftar
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
@@ -202,7 +202,7 @@ Exp         : $exp
 IPVPS       : $daftar
 Reg Date    : $hariini
 "
-#echo "${TEXT}" >>/root/tarap/newuser
+#echo "${TEXT}" >>/root/rehanvip/newuser
 echo "### $client $exp $daftar $isadmin" >>/root/pp/ipvps
 git add .
 git commit -m register &> /dev/null
