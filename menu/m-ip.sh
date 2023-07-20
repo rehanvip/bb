@@ -125,7 +125,7 @@ if [[ $daftar = $REQIP ]]; then
 echo -e "$COLOR1 ${NC}  [INFO] VPS IP Already Registered!!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• REHAN VIP •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -187,10 +187,10 @@ done
 
 exp=$(date -d "$exp days" +"%Y-%m-%d")
 hariini=$(date -d "0 days" +"%Y-%m-%d")
-git config --global user.email "vpsrehan@gmail.com" &> /dev/null
-git config --global user.name "rehanvip" &> /dev/null
-git clone https://github.com/rehanvip/pp.git &> /dev/null
-cd /root/ip/ &> /dev/null
+git config --global user.email "${EMAILGIT}" &> /dev/null
+git config --global user.name "${USERGIT}" &> /dev/null
+git clone https://github.com/${USERGIT}/pp.git &> /dev/null
+cd /root/pp/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
 touch vps &> /dev/null
@@ -202,13 +202,13 @@ Exp         : $exp
 IPVPS       : $daftar
 Reg Date    : $hariini
 "
-#echo "${TEXT}" >>/root/rehanvip/newuser
+#echo "${TEXT}" >>/root/tarap/newuser
 echo "### $client $exp $daftar $isadmin" >>/root/pp/ipvps
 git add .
 git commit -m register &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/rehanvip/pp.git &> /dev/null
-git push -f https://${APIGIT}@github.com/rehanvip/pp.git &> /dev/null
+git remote add origin https://github.com/${USERGIT}/pp.git &> /dev/null
+git push -f https://${APIGIT}@github.com/${USERGIT}/pp.git &> /dev/null
 sleep 1
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -223,7 +223,7 @@ echo -e "$COLOR1 ${NC}  IP VPS        : $daftar"
 echo -e "$COLOR1 ${NC}  Register Date : $hariini"
 echo -e "$COLOR1 ${NC}  Expired Date  : $exp"
 cd
-rm -rf /root/pp
+rm -rf /root/ip
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• REHAN VIP •${NC}                 $COLOR1 $NC"
@@ -235,9 +235,9 @@ menu-ip
 function delipvps(){
 clear
 rm -rf /root/ip &> /dev/null
-git config --global user.email "vpsrehan@gmail.com" &> /dev/null
-git config --global user.name "rehanvip" &> /dev/null
-git clone https://github.com/rehanvip/pp.git &> /dev/null
+git config --global user.email "${EMAILGIT}" &> /dev/null
+git config --global user.name "${USERGIT}" &> /dev/null
+git clone https://github.com/${USERGIT}/pp.git &> /dev/null
 cd /root/pp/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
@@ -285,8 +285,8 @@ echo "${TEXTD}" >>/root/pp/delete_log  &> /dev/null
 git add . &> /dev/null
 git commit -m remove &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/rehanvip/pp.git &> /dev/null
-git push -f https://${APIGIT}@github.com/$rehanvip/pp.git &> /dev/null
+git remote add origin https://github.com/${USERGIT}/pp.git &> /dev/null
+git push -f https://${APIGIT}@github.com/${USERGIT}/pp.git &> /dev/null
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
@@ -298,7 +298,7 @@ echo -e "$COLOR1 ${NC}  Ip VPS       : $ivps1"
 echo -e "$COLOR1 ${NC}  Expired Date : $exp"
 echo -e "$COLOR1 ${NC}  Client Name  : $name1"
 cd
-rm -rf /root/ip
+rm -rf /root/pp
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• REHAN VIP •${NC}                 $COLOR1 $NC"
@@ -314,17 +314,17 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-rm -rf /root/ip
-git config --global user.email "vpsrehan@gmail.com" &> /dev/null
-git config --global user.name "rehanvip" &> /dev/null
-git clone https://github.com/rehanvip/pp.git
+rm -rf /root/pp
+git config --global user.email "${EMAILGIT}" &> /dev/null
+git config --global user.name "${USERGIT}" &> /dev/null
+git clone https://github.com/${USERGIT}/pp.git
 cd /root/pp/
 rm -rf .git
 git init
 touch vps
 echo -e "   [ ${Lyellow}INFO${NC} ] Checking list.."
 
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/pp/ipvps")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/ip/vps")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
   clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -406,8 +406,8 @@ sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/pp/ipvps
 git add .
 git commit -m renew
 git branch -M main
-git remote add origin https://github.com/rehanvip/pp.git
-git push -f https://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@github.com/rehanvip/pp.git
+git remote add origin https://github.com/${USERGIT}/pp.git
+git push -f https://${APIGIT}@github.com/${USERGIT}/pp.git
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
@@ -421,7 +421,7 @@ echo -e "$COLOR1 ${NC}  Days Added    : $masaaktif Days"
 echo -e "$COLOR1 ${NC}  Expired Date  : $exp4"
 echo -e "$COLOR1 ${NC}  Client Name   : $name1"
 cd
-rm -rf /root/ip
+rm -rf /root/pp
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• REHAN VIP •${NC}                 $COLOR1 $NC"
@@ -433,10 +433,10 @@ m-ip
 
 function useripvps(){
 clear
-rm -rf /root/pp
-git config --global user.email "vpsrehan@gmail.com"
-git config --global user.name "rehanvip"
-git clone https://github.com/rehanvip/pp.git
+rm -rf /root/ip
+git config --global user.email "${EMAILGIT}"
+git config --global user.name "${USERGIT}"
+git clone https://github.com/${USERGIT}/pp.git
 cd /root/pp/
 rm -rf .git
 git init
@@ -463,17 +463,17 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-rm -rf /root/ip
-git config --global user.email "vpsrehan@gmail.com" &> /dev/null
-git config --global user.name "rehanvip" &> /dev/null
-git clone https://github.com/rehanvip/pp.git
+rm -rf /root/pp
+git config --global user.email "${EMAILGIT}" &> /dev/null
+git config --global user.name "${USERGIT}" &> /dev/null
+git clone https://github.com/${USERGIT}/pp.git
 cd /root/pp/
 rm -rf .git
 git init
 touch vps
 echo -e "   [ ${Lyellow}INFO${NC} ] Checking list.."
 
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/ip/vps")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/pp/ipvps")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
   clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -528,7 +528,7 @@ read -p "   RENEW IP : " RENEW
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
-REQIP=$(curl -sS https://raw.githubusercontent.com/rehanvip/pp/main/ipvps | awk '{print $4}' | grep $daftar)
+REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/pp/main/ipvps | awk '{print $4}' | grep $daftar)
 if [[ $RENEW = $ivps1 ]]; then
 cd
 clear
@@ -545,8 +545,8 @@ echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
 fi
-#name1=$(grep -E "^### " "/root/rehanvip/pp" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p) #name
-#exp=$(grep -E "^### " "/root/rehanvip/pp" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p) #exp
+#name1=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p) #name
+#exp=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p) #exp
 ivps1=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p) #ip
 
 #now=$(date +%Y-%m-%d)
@@ -555,12 +555,12 @@ ivps1=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 4 | sed -n "${CLIENT_NU
 #exp2=$(((d1 - d2) / 86400))
 #exp3=$(($exp2 + $masaaktif))
 #exp4=$(date -d "$exp3 days" +"%Y-%m-%d")
-sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/ip/vps
+sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/pp/ipvps
 git add .
 git commit -m renew
 git branch -M main
-git remote add origin https://github.com/rehanvip/pp.git
-git push -f https://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@github.com/rehanvip/pp.git
+git remote add origin https://github.com/${USERGIT}/pp.git
+git push -f https://${APIGIT}@github.com/${USERGIT}/pp.git
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
