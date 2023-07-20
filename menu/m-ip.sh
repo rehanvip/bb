@@ -34,7 +34,7 @@ if [ -z $EMAIL1 ]; then
 echo -e "$COLOR1 ${NC}   [INFO] Please Input Your Github Email Adress"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -46,7 +46,7 @@ if [ -z $USERNAME1 ]; then
 echo -e "$COLOR1 ${NC}   [INFO] Please Input Your Github Username"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -58,7 +58,7 @@ if [ -z $API1 ]; then
 echo -e "$COLOR1 ${NC}  [INFO] Please Input Your Github API"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -82,7 +82,7 @@ echo -e "$COLOR1 ${NC}   • User  : $USERNAME1"
 echo -e "$COLOR1 ${NC}   • API   : $API1"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -102,7 +102,7 @@ echo -e "$COLOR1 ${NC}  • All U need Is Create a new repository "
 echo -e "$COLOR1 ${NC}    & Nammed : ip "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -125,7 +125,7 @@ if [[ $daftar = $REQIP ]]; then
 echo -e "$COLOR1 ${NC}  [INFO] VPS IP Already Registered!!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -146,7 +146,7 @@ cd
 echo -e "$COLOR1 ${NC}  [INFO] Please Input client"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -160,7 +160,7 @@ cd
 echo -e "$COLOR1 ${NC}   [INFO] Please Input exp date"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -190,7 +190,7 @@ hariini=$(date -d "0 days" +"%Y-%m-%d")
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
 git clone https://github.com/${USERGIT}/ip.git &> /dev/null
-cd /root/pp/ &> /dev/null
+cd /root/ip/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
 touch vps &> /dev/null
@@ -226,7 +226,7 @@ cd
 rm -rf /root/ip
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHINH •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -238,7 +238,7 @@ rm -rf /root/ip &> /dev/null
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
 git clone https://github.com/${USERGIT}/ip.git &> /dev/null
-cd /root/pp/ &> /dev/null
+cd /root/ip/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
 touch vps &> /dev/null
@@ -250,7 +250,7 @@ echo -e "$COLOR1┌────────────────────�
 grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 2-4 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -rp "   Please Input Number : " nombor
@@ -263,7 +263,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1 ${NC}   [INFO] Please Input Correct Number"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -298,10 +298,10 @@ echo -e "$COLOR1 ${NC}  Ip VPS       : $ivps1"
 echo -e "$COLOR1 ${NC}  Expired Date : $exp"
 echo -e "$COLOR1 ${NC}  Client Name  : $name1"
 cd
-rm -rf /root/pp
+rm -rf /root/ip
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -314,11 +314,11 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-rm -rf /root/pp
+rm -rf /root/ip
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/pp.git
-cd /root/pp/
+git clone https://github.com/${USERGIT}/ip.git
+cd /root/ip/
 rm -rf .git
 git init
 touch vps
@@ -334,7 +334,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}   [INFO] You have no existing clients!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -345,10 +345,10 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 2-4 | nl -s '. '
+grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 2-4 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -367,7 +367,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}   [INFO] Please Input Correct Number"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -386,15 +386,15 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}  [INFO] Please Input Correct Number"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
 fi
-name1=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p) #name
-exp=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p) #exp
-ivps1=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p) #ip
+name1=$(grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p) #name
+exp=$(grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p) #exp
+ivps1=$(grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p) #ip
 
 now=$(date +%Y-%m-%d)
 d1=$(date -d "$exp" +%s)
@@ -402,12 +402,12 @@ d2=$(date -d "$now" +%s)
 exp2=$(((d1 - d2) / 86400))
 exp3=$(($exp2 + $masaaktif))
 exp4=$(date -d "$exp3 days" +"%Y-%m-%d")
-sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/pp/ipvps
+sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/ip/vps
 git add .
 git commit -m renew
 git branch -M main
-git remote add origin https://github.com/${USERGIT}/pp.git
-git push -f https://${APIGIT}@github.com/${USERGIT}/pp.git
+git remote add origin https://github.com/${USERGIT}/ip.git
+git push -f https://${APIGIT}@github.com/${USERGIT}/ip.git
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
@@ -421,10 +421,10 @@ echo -e "$COLOR1 ${NC}  Days Added    : $masaaktif Days"
 echo -e "$COLOR1 ${NC}  Expired Date  : $exp4"
 echo -e "$COLOR1 ${NC}  Client Name   : $name1"
 cd
-rm -rf /root/pp
+rm -rf /root/ip
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -436,8 +436,8 @@ clear
 rm -rf /root/ip
 git config --global user.email "${EMAILGIT}"
 git config --global user.name "${USERGIT}"
-git clone https://github.com/${USERGIT}/pp.git
-cd /root/pp/
+git clone https://github.com/${USERGIT}/ip.git
+cd /root/ip/
 rm -rf .git
 git init
 touch vps
@@ -446,13 +446,13 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• USERLIST IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 2-4 | nl -s '. '
+grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 2-4 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 cd
-rm -rf /root/pp
+rm -rf /root/ip
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -463,17 +463,17 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-rm -rf /root/pp
+rm -rf /root/ip
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/pp.git
-cd /root/pp/
+git clone https://github.com/${USERGIT}/ip.git
+cd /root/ip/
 rm -rf .git
 git init
 touch vps
 echo -e "   [ ${Lyellow}INFO${NC} ] Checking list.."
 
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/pp/ipvps")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/ip/vps")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
   clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -483,7 +483,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}   [INFO] You have no existing clients!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -494,10 +494,10 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 2-4 | nl -s '. '
+grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 2-4 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -516,7 +516,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}   [INFO] Please Input Correct Number"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -528,7 +528,7 @@ read -p "   RENEW IP : " RENEW
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
-REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/pp/main/ipvps | awk '{print $4}' | grep $daftar)
+REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/ip/main/vps | awk '{print $4}' | grep $daftar)
 if [[ $RENEW = $ivps1 ]]; then
 cd
 clear
@@ -539,15 +539,15 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}  [INFO] Please Input Correct Number"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
 fi
-#name1=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p) #name
-#exp=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p) #exp
-ivps1=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p) #ip
+#name1=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p) #name
+#exp=$(grep -E "^### " "/root/tarap/ipvps" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p) #exp
+ivps1=$(grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p) #ip
 
 #now=$(date +%Y-%m-%d)
 #d1=$(date -d "$exp" +%s)
@@ -555,12 +555,12 @@ ivps1=$(grep -E "^### " "/root/pp/ipvps" | cut -d ' ' -f 4 | sed -n "${CLIENT_NU
 #exp2=$(((d1 - d2) / 86400))
 #exp3=$(($exp2 + $masaaktif))
 #exp4=$(date -d "$exp3 days" +"%Y-%m-%d")
-sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/pp/ipvps
+sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/ip/vps
 git add .
 git commit -m renew
 git branch -M main
-git remote add origin https://github.com/${USERGIT}/pp.git
-git push -f https://${APIGIT}@github.com/${USERGIT}/pp.git
+git remote add origin https://github.com/${USERGIT}/ip.git
+git push -f https://${APIGIT}@github.com/${USERGIT}/ip.git
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
@@ -574,10 +574,10 @@ echo -e "$COLOR1 ${NC}  Days Added    : $masaaktif Days"
 echo -e "$COLOR1 ${NC}  Expired Date  : $exp4"
 echo -e "$COLOR1 ${NC}  Client Name   : $name1"
 cd
-rm -rf /root/pp
+rm -rf /root/ip
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -597,13 +597,13 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}  [INFO] Github API Reseted Successfully"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
 }
-Isadmin=$(curl -sS https://raw.githubusercontent.com/bagusid93/pp/main/ipvps | grep $MYIP | awk '{print $5}')
+Isadmin=$(curl -sS https://raw.githubusercontent.com/rehanvip/ip/main/vps | grep $MYIP | awk '{print $5}')
 if [ "$Isadmin" = "OFF" ]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -612,10 +612,10 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} [INFO] Only PRO Users Can Use This Panel"
 echo -e "$COLOR1 ${NC} [INFO] Buy Premium Membership : "
-echo -e "$COLOR1 ${NC} [INFO] PM : https://wa.me/+6281250851741"
+echo -e "$COLOR1 ${NC} [INFO] PM : https://wa.me/085754292950"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -645,7 +645,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}   • You Need To Set Github API First!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to Set API"
@@ -675,7 +675,7 @@ echo -e "   $COLOR1 [00]$NC • GO BACK"
 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• PAPADA'AN STORE •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
