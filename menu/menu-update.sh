@@ -74,8 +74,8 @@ clear
 echo -e "\e[0;32mGetting New Version Script..\e[0m"
 sleep 1
 echo ""
-rm -rf update
 rm -rf menu-update
+rm -rf update
 rm -rf menu
 rm -rf m-bot
 rm -rf m-ip
