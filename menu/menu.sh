@@ -214,7 +214,7 @@ export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "${BIYellow}                     🔥 INFORMASI VPS 🔥                        ${NC}"
+echo -e "${BIYellow}                       🔥 ReyhanVpN 🔥                        ${NC}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e "${BIYellow}□ Server Uptime       = ${BICyan}$( uptime -p  | cut -d " " -f 2-10000 ) ${NC}"
@@ -250,12 +250,6 @@ echo -e " ${BICyan}|    [${BIWhite}03${BICyan}]${BICyan}[${BIYellow}Menu${BICyan
 echo -e " ${BICyan}|    [${BIWhite}04${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] TROJAN  ${NC}" "     ${BICyan}[${BIWhite}09${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] RUNNING    ${NC}" "${BICyan}  │${NC}"
 echo -e " ${BICyan}|    [${BIWhite}05${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SSWS    ${NC}"  "     ${BICyan}[${BIWhite}10${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SET REBOOT ${NC}" "${BICyan}  │${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
-echo -e " ${BIYellow}                 🔥 MENU TAMBAHAN 🔥${NC} "
-echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}|    [${BIWhite}11${BICyan}] BOT TELEGRAM${NC} "
-echo -e " ${BICyan}|    [${BIWhite}12${BICyan}] REGISTRASI IPVPS BARU${NC} "
-echo -e " ${BICyan}|    [${BIWhite}13${BICyan}] CLEAR SAMPAH${NC} "
-echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
