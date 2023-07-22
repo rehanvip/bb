@@ -277,7 +277,7 @@ case $opt in
 12) clear ; m-ip ;;
 13) clear ; clearcache ;;
 14) clear ; menu-update ;;
-15) clear ; menu-bckp ;;
+15) clear ; menu-bckpl ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; x ;;
