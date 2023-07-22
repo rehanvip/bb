@@ -214,7 +214,7 @@ export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "${BIYellow}                       🔥 ReyhanVpN 🔥                        ${NC}"
+echo -e "${BIYellow}                       🔥 Reyhan21VpS 🔥                        ${NC}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e "${BIYellow}□ Server Uptime       = ${BICyan}$( uptime -p  | cut -d " " -f 2-10000 ) ${NC}"
@@ -233,7 +233,7 @@ echo -e "${BIYellow}□ Whatsapp            = ${BICyan}085789736278${NC}"
 echo -e "${BIYellow}□ AutoScript By       = ${BICyan}REHAN VIP${NC}"
 
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIPurple}                Jangan lupa bahagia $NC"
+echo -e "${BIPurple}                Friends family $NC"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 
 echo -e " ${BIYellow}┌──────────────────────────────────────────────────┐${NC}" 
