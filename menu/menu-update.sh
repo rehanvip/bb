@@ -2,6 +2,21 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 BURIQ () {
+    curl -sS https://raw.githubusercontent.com/rehanvip/ip/main/vps > /root/tmp
+    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
+    for user in "${data[@]}"
+    do
+    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
+    d1=(`date -d "$exp" +%s`)
+    d2=(`date -d "$biji" +%s`)
+    exp2=$(( (d1 - d2) / 86400 ))
+    if [[ "$exp2" -le "0" ]]; then
+    echo $user > /etc/.$user.ini
+    else
+    rm -f /etc/.$user.ini > /dev/null 2>&1
+    fi
+    done
+    rm -f /root/tmp
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -74,8 +89,8 @@ clear
 echo -e "\e[0;32mGetting New Version Script..\e[0m"
 sleep 1
 echo ""
-rm -rf menu-update
 rm -rf update
+rm -rf menu-update
 rm -rf menu
 rm -rf m-bot
 rm -rf m-ip
@@ -143,6 +158,9 @@ rm -rf m-sshovpn
 rm -rf cf
 rm -rf add-vmess
 rm -rf menu-bckp
+rm -rf add-ns
+rm -rf issue
+rm -rf add-wireguard
 
 cd /usr/bin
 wget -O menu-update "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-update.sh"
@@ -192,7 +210,9 @@ wget -O cf "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/cf.sh"
 wget -O menu-bckp "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-bckp.sh"
 wget -O add-ssws "https://raw.githubusercontent.com/rehanvip/bb/main/xray/add-ssws.sh"
 wget -O add-v2ray "https://raw.githubusercontent.com/rehanvip/bb/main/xray/add-v2ray.sh"
-
+wget -O wireguard "https://raw.githubusercontent.com/rehanvip/bb/main/wireguard/add-wireguard.sh"
+wget -O add-ns "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/add-ns.sh"
+wget -O issue "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/issue.net"
 
 chmod +x menu-update
 chmod +x update
@@ -241,12 +261,15 @@ chmod +x cf
 chmod +x menu-bckp
 chmod +x add-ssws
 chmod +x add-v2ray
+chmod +x add-ns
+chmod +x issue
+chmod +x add-wireguard
 
 clear
 echo -e ""
 echo -e "\e[0;32mDownloaded successfully!\e[0m"
 echo ""
-ver=$( curl sS https://raw.githubusercontent.com/rehanvip/bb/main/versi )
+ver=$( curl sS https://raw.githubusercontent.com/Tarap-Kuhing/v/main/versi )
 sleep 1
 echo -e "\e[0;32mPatching New Update, Please Wait...\e[0m"
 echo ""
