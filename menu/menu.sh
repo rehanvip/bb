@@ -257,7 +257,7 @@ echo -e "${BICyan} └───────────────────�
 echo -e " ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e " ${BICyan}│  Version      ${NC} :${BIWhite} ${sem} ${IPurple}Last Update ${NC}"
 echo -e " ${BICyan}│  User         ${NC} :${BIPurple} ${Name} ${NC}"
-echo -e " ${BICyan}│  Expired      ${NC} :${RED} ${certificate} ${GREEN}(day)${NC}"
+echo -e " ${BICyan}│  Expired      ${NC} :${RED} ${Exp} ${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────┘${NC}"
 echo ""
 read -p " Select menu : " opt
