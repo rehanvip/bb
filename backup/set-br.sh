@@ -17,7 +17,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 
 apt install rclone -y
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/HssPunya93/julakhss/main/JB2/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/rehanvip/bb/main/backup/rclone.conf"
 #Install Wondershaper
 cd /bin
 git clone  https://github.com/magnific0/wondershaper.git
@@ -44,12 +44,12 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/HssPunya93/julakhss/main/JB2/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/HssPunya93/julakhss/main/JB2/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/HssPunya93/julakhss/main/JB2/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/HssPunya93/julakhss/main/JB2/strt.sh"
-wget -O limitspeed "https://raw.githubusercontent.com/HssPunya93/julakhss/main/JB2/limitspeed.sh"
-wget -O xp "https://raw.githubusercontent.com/ppnhss/sc3/main/ssh/xp.sh"
+wget -O autobackup "https://raw.githubusercontent.com/rehanvip/bb/main/backup/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/rehanvip/bb/main/backup/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/rehanvip/bb/main/backup/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/rehanvip/bb/main/backup/strt.sh"
+wget -O limitspeed "https://raw.githubusercontent.com/rehanvip/bb/main/backup/limitspeed.sh"
+wget -O xp "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/xp.sh"
 
 chmod +x autobackup
 chmod +x backup
