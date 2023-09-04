@@ -161,6 +161,8 @@ rm -rf menu-bckp
 rm -rf add-ns
 rm -rf issue
 rm -rf add-wireguard
+rm -rf fixssh
+rm -rf fixbbr
 
 cd /usr/bin
 wget -O menu-update "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-update.sh"
@@ -213,6 +215,8 @@ wget -O add-v2ray "https://raw.githubusercontent.com/rehanvip/bb/main/xray/add-v
 wget -O wireguard "https://raw.githubusercontent.com/rehanvip/bb/main/wireguard/add-wireguard.sh"
 wget -O add-ns "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/add-ns.sh"
 wget -O issue "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/issue.net"
+wget -O fixssh "https://raw.githubusercontent.com/rehanvip/bb/main/OPENVPN/fix.sh"
+wget -O fixbbr "https://raw.githubusercontent.com/rehanvip/bb/main/backup/set-br.sh"
 
 chmod +x menu-update
 chmod +x update
@@ -264,6 +268,8 @@ chmod +x add-v2ray
 chmod +x add-ns
 chmod +x issue
 chmod +x add-wireguard
+chmod +x fixssh
+chmod +x fixbbr
 
 clear
 echo -e ""
