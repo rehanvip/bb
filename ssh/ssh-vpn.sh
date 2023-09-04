@@ -341,6 +341,7 @@ wget -O trialtrojango "https://raw.githubusercontent.com/rehanvip/bb/main/xray/t
 wget -O deltrgo "https://raw.githubusercontent.com/rehanvip/bb/main/xray/deltrgo.sh"
 wget -O renewtrgo "https://raw.githubusercontent.com/rehanvip/bb/main/xray/renewtrgo.sh"
 wget -O cektrgo "https://raw.githubusercontent.com/rehanvip/bb/main/xray/cektrgo.sh"
+wget -O menu-backup "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-backup.sh"
 chmod +x menu-update
 chmod +x update
 chmod +x menu
@@ -405,6 +406,7 @@ chmod +x trialtrojango
 chmod +x deltrgo
 chmod +x renewtrgo
 chmod +x cektrgo
+chmod +x menu-backup
 cd
 
 
