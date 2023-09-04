@@ -244,10 +244,10 @@ echo -e " ${BIYellow}└──────────────────�
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}|    [${BIWhite}01${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SSH     ${NC}"    "     ${BICyan}[${BIWhite}06${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] TRIALL     ${NC}" "${BICyan}  │"
-echo -e " ${BICyan}|    [${BIWhite}02${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] VMESS   ${NC}" "     ${BICyan}[${BIWhite}07${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] BACKUP     ${NC}" "${BICyan}  │"
-echo -e " ${BICyan}|    [${BIWhite}03${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] VLESS   ${NC}"  "     ${BICyan}[${BIWhite}08${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SETTING    ${NC}" "${BICyan}  │"
-echo -e " ${BICyan}|    [${BIWhite}04${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] TROJAN  ${NC}" "     ${BICyan}[${BIWhite}09${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] RUNNING    ${NC}" "${BICyan}  │${NC}"
+echo -e " ${BICyan}|    [${BIWhite}01${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SSH     ${NC}"    "     ${BICyan}[${BIWhite}06${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SETTING     ${NC}" "${BICyan}  │"
+echo -e " ${BICyan}|    [${BIWhite}02${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] VMESS   ${NC}" "     ${BICyan}[${BIWhite}07${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] RUNNING     ${NC}" "${BICyan}  │"
+echo -e " ${BICyan}|    [${BIWhite}03${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] VLESS   ${NC}"  "     ${BICyan}[${BIWhite}08${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] TRIAL    ${NC}" "${BICyan}  │"
+echo -e " ${BICyan}|    [${BIWhite}04${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] TROJAN  ${NC}" "     ${BICyan}[${BIWhite}09${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] BACKUP    ${NC}" "${BICyan}  │${NC}"
 echo -e " ${BICyan}|    [${BIWhite}05${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SSWS    ${NC}"  "     ${BICyan}[${BIWhite}10${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SET REBOOT ${NC}" "${BICyan}  │${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
@@ -268,10 +268,10 @@ case $opt in
 3) clear ; menu-vless ;;
 4) clear ; menu-trojan ;;
 5) clear ; menu-ssws ;;
-6) clear ; menu-trial ;;
-7) clear ; menu-bckp ;;
-8) clear ; menu-set ;;
-9) clear ; running ;;
+6) clear ; menu-set ;;
+7) clear ; running ;;
+8) clear ; menu-trial ;;
+9) clear ; menu-backup ;;
 10) clear ; jam ;;
 11) clear ; m-bot ;;
 12) clear ; m-ip ;;
