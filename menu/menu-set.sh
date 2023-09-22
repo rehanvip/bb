@@ -55,7 +55,8 @@ echo -e "     ${BICyan}[${BIWhite}09${BICyan}] Cek Bandwith"
 echo -e "     ${BICyan}[${BIWhite}10${BICyan}] Setting Auto Reboot"
 echo -e "     ${BICyan}[${BIWhite}11${BICyan}] Update Script"
 echo -e "     ${BICyan}[${BIWhite}12${BICyan}] Menu Bot"
-echo -e "     ${BICyan}[${BIWhite}12${BICyan}] Menu Registrasi Ipvps"
+echo -e "     ${BICyan}[${BIWhite}13${BICyan}] Menu Registrasi Ipvps"
+echo -e "     ${BICyan}[${BIWhite}14${BICyan}] Menu Ganti Port Vps"
 echo -e ""
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BIYellow}Press x or [ Ctrl+C ] • To-${BIWhite}Exit${NC}"
@@ -76,6 +77,7 @@ case $opt in
 11) clear ; menu-update ; exit ;;
 12) clear ; m-bot ; exit ;;
 13) clear ; m-ip ; exit ;;
+14) clear ; passwd ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; menu-set ;;
