@@ -342,6 +342,12 @@ wget -O deltrgo "https://raw.githubusercontent.com/rehanvip/bb/main/xray/deltrgo
 wget -O renewtrgo "https://raw.githubusercontent.com/rehanvip/bb/main/xray/renewtrgo.sh"
 wget -O cektrgo "https://raw.githubusercontent.com/rehanvip/bb/main/xray/cektrgo.sh"
 wget -O menu-backup "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-backup.sh"
+wget -O menu-theme "https://raw.githubusercontent.com/rehanvip/bb/main/menu/menu-theme.sh"
+wget -O add-tru "https://raw.githubusercontent.com/rehanvip/bb/main/xray/add-tru.sh"
+wget -O add-vls "https://raw.githubusercontent.com/rehanvip/bb/main/xray/add-vls.sh"
+wget -O add-vms "https://raw.githubusercontent.com/rehanvip/bb/main/xray/add-vms.sh"
+wget -O user-lock "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/user-lock.sh"
+wget -O user-unlock "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/user-unlock.sh"
 chmod +x menu-update
 chmod +x update
 chmod +x menu
@@ -407,6 +413,12 @@ chmod +x deltrgo
 chmod +x renewtrgo
 chmod +x cektrgo
 chmod +x menu-backup
+chmod +x menu-theme
+chmod +x add-tru
+chmod +x add-vls
+chmod +x add-vms
+chmod +x user-lock
+chmod +x user-unlock
 cd
 
 
