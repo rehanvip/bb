@@ -249,7 +249,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 
 clear
 echo -e "${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "$COLOR1 ${NC}${COLBG1}                       🔥 Reyhan community 🔥                        ${NC}"
+echo -e "$COLOR1 ${NC}${COLBG1}          🔥 Reyhan community 🔥               ${NC}"
 echo -e "${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "♣${BIYellow} Server Uptime       👉 ${COLOR1}$( uptime -p  | cut -d " " -f 2-10000 ) ${NC}"
 echo -e "♣${BIYellow} Current Time        👉 ${COLOR1}$( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
