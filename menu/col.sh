@@ -1,4 +1,10 @@
+#!/bin/bash
+
+rm -rf /etc/per
+mkdir -p /etc/julak
+mkdir -p /etc/julak/theme
 clear
+
 cat <<EOF>> /etc/julak/theme/red
 BG : \E[40;1;41m
 TEXT : \033[0;31m
@@ -26,3 +32,4 @@ EOF
 cat <<EOF>> /etc/julak/theme/color.conf
 magenta
 EOF
+echo ""
