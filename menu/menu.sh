@@ -1,4 +1,17 @@
 #!/bin/bash
+#Script By Julak Bantur
+#Hss-Punya
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+###########- COLOR CODE -##############
+colornow=$(cat /etc/julak/theme/color.conf)
+NC="\e[0m"
+RED="\033[0;31m"
+COLOR1="$(cat /etc/julak/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+COLBG1="$(cat /etc/julak/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+WH='\033[1;37m'
+###########- END COLOR CODE -##########
+
 BURIQ () {
     curl -sS https://raw.githubusercontent.com/rehanvip/ip/main/vps > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
@@ -29,7 +42,7 @@ CekTwo=$(cat /etc/.$Name.ini)
         res="Expired"
     fi
 else
-res="Permission Accepted..."
+res="Aktif"
 fi
 }
 
@@ -49,12 +62,22 @@ NC='\e[0m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 PERMISSION
+if [ -f /home/needupdate ]; then
+red "Your script need to update first !"
+exit 0
+elif [ "$res" = "Aktif" ]; then
+echo -ne
+else
+echo -e "Permission Denied!"
+exit 0
+fi
 
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
 Exp=$(curl -sS https://raw.githubusercontent.com/rehanvip/ip/main/vps | grep $MYIP | awk '{print $3}')
 fi
+clear
 
 # =========================================
 vmc=$(grep -c -E "^#vmg " "/etc/xray/config.json")
@@ -189,7 +212,7 @@ else
 resv2r="${red}OFF${NC}"
 fi
 today=$(date -d "0 days" +"%Y-%m-%d")
-Exp1=$(curl https://raw.githubusercontent.com/rehanvip/pp/main/ipvps | grep $MYIP | awk '{print $3}')
+Exp1=$(curl https://raw.githubusercontent.com/rehanvip/ip/main/vps | grep $MYIP | awk '{print $3}')
 if [[ $today < $Exp1 ]]; then
     sts="${Info}"
 else
@@ -209,56 +232,66 @@ today=`date -d "0 days" +"%Y-%m-%d"`
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$today" +%s)
 certificate=$(( (d1 - d2) / 86400 ))
-export sem=$( curl -s https://raw.githubusercontent.com/rehanvip/pp/main/versi)
-export pak=$( cat /home/.ver)
+export sem=$( curl -s https://raw.githubusercontent.com/rehanvip/bb/main/versi)
 IPVPS=$(curl -s ipinfo.io/ip )
+
+# IBAM
+ISP=$(curl -s ipinfo.io/org?token=ce3da57536810d | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city?token=ce3da57536810d )
+WKT=$(curl -s ipinfo.io/timezone?token=ce3da57536810d )
+
+# CERTIFICATE STATUS
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$today" +%s)
+certificate=$(( (d1 - d2) / 86400 ))
+export sem=$( curl -s https://raw.githubusercontent.com/rehanvip/bb/main/versi)
+IPVPS=$(curl -s ipinfo.io/ip )
+
 clear
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "${BIYellow}                       🔥 Reyhan21VpS 🔥                        ${NC}"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-
-echo -e "${BIYellow}□ Server Uptime       = ${BICyan}$( uptime -p  | cut -d " " -f 2-10000 ) ${NC}"
-echo -e "${BIYellow}□ Current Time        = ${BICyan}$( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
-echo -e "${BIYellow}□ Operating System    = ${BICyan}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
-echo -e "${BIYellow}□ Use Core            = ${BICyan}XRAY ${NC}"
-echo -e "${BIYellow}□ Ip Vps              = ${BICyan}$IPVPS ${NC}"
-echo -e "${BIYellow}□ Current Domain      = ${BICyan}$( cat /etc/xray/domain )${NC}"
-echo -e "${BIYellow}□ NS Domain           = ${BICyan}$( cat /etc/xray/dns )${NC}"
-echo -e "${BIYellow}□ Jumlah Ram          = ${BICyan}${totalram} MB"
-echo -e "${BIYellow}□ CPU Usage           = ${BICyan}$cpu_usage"
-echo -e "${BIYellow}□ Clients Name        = ${BICyan}${Name}${NC}"
-echo -e "${BIYellow}□ Expired Script VPS  = ${BICyan}${Exp}${NC} ${sts}"
-echo -e "${BIYellow}□ Time Reboot VPS     = ${BICyan}00:00 ${GREEN}(Jam 12 Malam)${NC}"
-echo -e "${BIYellow}□ Whatsapp            = ${BICyan}085789736278${NC}"
-echo -e "${BIYellow}□ AutoScript By       = ${BICyan}REHAN VIP${NC}"
-
-echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIPurple}                Friends family $NC"
-echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
-
-echo -e " ${BIYellow}┌──────────────────────────────────────────────────┐${NC}" 
-echo -e " ${BIYellow}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN $NC" 
-echo -e " ${BIYellow}│  \033[0m ${Blue} $ssh1        $vmc           $vlx          $trx   $NC" 
-echo -e " ${BIYellow}└──────────────────────────────────────────────────┘${NC}" 
-  
-echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
+echo -e "${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "$COLOR1 ${NC}${COLBG1}                       🔥 Reyhan community 🔥                        ${NC}"
+echo -e "${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "♣${BIYellow} Server Uptime       👉 ${COLOR1}$( uptime -p  | cut -d " " -f 2-10000 ) ${NC}"
+echo -e "♣${BIYellow} Current Time        👉 ${COLOR1}$( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
+echo -e "♣${BIYellow} Operating System    👉 ${COLOR1}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
+echo -e "♣${BIYellow} Isp                 👉 ${COLOR1}$ISP ${NC}"
+echo -e "♣${BIYellow} City                👉 ${COLOR1}$CITY ${NC}"
+echo -e "♣${BIYellow} Ip Vps              👉 ${COLOR1}$IPVPS ${NC}"
+echo -e "♣${BIYellow} Current Domain      👉 ${COLOR1}$( cat /etc/xray/domain )${NC}"
+echo -e "♣${BIYellow} NS Domain           👉 ${COLOR1}$( cat /etc/xray/dns )${NC}"
+echo -e "♣${BIYellow} Jumlah Ram          👉 ${COLOR1}${totalram} MB"
+echo -e "♣${BIYellow} CPU Usage           👉 ${COLOR1}$cpu_usage"
+echo -e "♣${BIYellow} Whatsapp            👉 ${BOLD}${BICyan}085789736278${NC}"
+echo -e "♣${BIYellow} AutoScript By       👉 ${BOLD}${BICyan}Reyhan community${NC}"
+echo -e "${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+  echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
-echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}|    [${BIWhite}01${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SSH     ${NC}"    "     ${BICyan}[${BIWhite}06${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SETTING     ${NC}" "${BICyan}  │"
-echo -e " ${BICyan}|    [${BIWhite}02${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] VMESS   ${NC}" "     ${BICyan}[${BIWhite}07${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] RUNNING     ${NC}" "${BICyan}  │"
-echo -e " ${BICyan}|    [${BIWhite}03${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] VLESS   ${NC}"  "     ${BICyan}[${BIWhite}08${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] TRIAL    ${NC}" "${BICyan}  │"
-echo -e " ${BICyan}|    [${BIWhite}04${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] TROJAN  ${NC}" "     ${BICyan}[${BIWhite}09${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] BACKUP    ${NC}" "${BICyan}  │${NC}"
-echo -e " ${BICyan}|    [${BIWhite}05${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SSWS    ${NC}"  "     ${BICyan}[${BIWhite}10${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}] SET REBOOT ${NC}" "${BICyan}  │${NC}"
-echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
-echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
-echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
-
-echo -e " ${BICyan}┌─────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│  Version      ${NC} :${BIWhite} ${sem} ${IPurple}Last Update ${NC}"
-echo -e " ${BICyan}│  User         ${NC} :${BIPurple} ${Name} ${NC}"
-echo -e " ${BICyan}│  Expired      ${NC} :${RED} ${Exp} ${NC}"
-echo -e " ${BICyan}└─────────────────────────────────────┘${NC}"
+echo -e " $COLOR1┌─────────────────────────────────────────────────────┐${NC}" 
+echo -e " $COLOR1│$NC       \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN $NC" 
+echo -e " $COLOR1│$NC       \033[0m ${Blue} $ssh1        $vmc           $vlx          $trx   $NC" 
+echo -e " $COLOR1└─────────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 ${NC}${COLBG1}                  🔥 MENU UTAMA 🔥                    ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1│$NC    ${BICyan}[${WH}01${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 SSH     ${NC}"    "     ${BICyan}[${WH}06${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 SETTING     ${NC}" "${COLOR1}│${NC}"
+echo -e " $COLOR1│$NC    ${BICyan}[${WH}02${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 VMESS   ${NC}" "     ${BICyan}[${WH}07${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 RUNNING     ${NC}" "${COLOR1}│${NC}"
+echo -e " $COLOR1│$NC    ${BICyan}[${WH}03${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 VLESS   ${NC}"  "     ${BICyan}[${WH}08${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 THEME    ${NC}" "${COLOR1}   │${NC}"
+echo -e " $COLOR1│$NC    ${BICyan}[${WH}04${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 TROJAN  ${NC}" "     ${BICyan}[${WH}09${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 BACKUP    ${NC}" "${COLOR1}  │${NC}"
+echo -e " $COLOR1│$NC    ${BICyan}[${WH}05${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 L2TP    ${NC}"  "     ${BICyan}[${WH}10${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 SET REBOOT ${NC}" "${COLOR1} │${NC}"
+echo -e " $COLOR1└─────────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1 ${NC}${COLBG1}                 🔥 MENU ADMIN 🔥                    ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1|$NC    ${BICyan}[${WH}11${BICyan}] ${COLOR1}REGISTRASI IPVPS BARU${NC} "
+echo -e "$COLOR1 └─────────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1 ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "${BICyan} ${NC} ${BICyan}HARI ini${NC}: ${Blue}$ttoday$NC ${BICyan}KEMARIN${NC}: ${Blue}$tyest$NC ${BICyan}BULAN${NC}: ${Blue}$tmon$NC $NC"
+echo -e "$COLOR1 └─────────────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1┌─────────────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1│$NC  ${WH}Version      ${NC} :${BICyan} ${sem} ${BICyan}LITE ${NC}"
+echo -e " $COLOR1│$NC  ${WH}User         ${NC} :${BIYellow} ${Name} ${NC}"
+echo -e " $COLOR1│$NC  ${WH}Expired      ${NC} :${Blue} ${Exp1}${NC} [${red}$res${NC}] ${NC}"
+echo -e " $COLOR1└─────────────────────────────────────────────────────┘${NC}"
+echo ""
+echo -e   " [$COLOR1 Tekan x Untuk Exit Script ${NC}]"
 echo ""
 read -p " Select menu : " opt
 echo -e ""
@@ -267,18 +300,18 @@ case $opt in
 2) clear ; menu-vmess ;;
 3) clear ; menu-vless ;;
 4) clear ; menu-trojan ;;
-5) clear ; menu-ssws ;;
+5) clear ; menu-l2tp ;;
 6) clear ; menu-set ;;
 7) clear ; running ;;
-8) clear ; menu-trial ;;
+8) clear ; menu-theme ;;
 9) clear ; menu-backup ;;
 10) clear ; jam ;;
-11) clear ; m-bot ;;
-12) clear ; m-ip ;;
-13) clear ; clearcache ;;
+11) clear ; m-ip ;;
+12) clear ; menu-update ;;
+13) clear ; menu-bckp ;;
 14) clear ; menu-update ;;
-15) clear ; menu-bckpl ;;
+15) clear ; menu-bckp ;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo "Anda salah tekan " ; sleep 1 ; x ;;
+*) echo "salah tekan sayang" ; sleep 1 ; menu ;;
 esac
