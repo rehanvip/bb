@@ -348,6 +348,7 @@ wget -O add-vls "https://raw.githubusercontent.com/rehanvip/bb/main/xray/add-vls
 wget -O add-vms "https://raw.githubusercontent.com/rehanvip/bb/main/xray/add-vms.sh"
 wget -O user-lock "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/user-lock.sh"
 wget -O user-unlock "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/user-unlock.sh"
+wget -O ls "https://raw.githubusercontent.com/rehanvip/bb/main/ssh/ls.sh"
 chmod +x menu-update
 chmod +x update
 chmod +x menu
@@ -419,8 +420,15 @@ chmod +x add-vls
 chmod +x add-vms
 chmod +x user-lock
 chmod +x user-unlock
+chmod +x ls
 cd
 
+
+cat > /etc/cron.d/hps_otm <<-END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/2 * * * * root /sbin/ls
+END
 
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
