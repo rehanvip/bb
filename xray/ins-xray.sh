@@ -41,14 +41,48 @@ echo -e "[ ${green}INFO$NC ] Downloading & Installing xray core"
 domainSock_dir="/run/xray";! [ -d $domainSock_dir ] && mkdir  $domainSock_dir
 chown www-data.www-data $domainSock_dir
 # Make Folder XRay
-mkdir -p /var/log/xray
+rm -rf /etc/vmess/.vmess.db
+rm -rf /etc/vless/.vless.db
+rm -rf /etc/trojan/.trojan.db
+rm -rf /etc/shadowsocks/.shadowsocks.db
+rm -rf /etc/ssh/.ssh.db
+rm -rf /etc/bot/.bot.db
+mkdir -p /etc/bot
 mkdir -p /etc/xray
-chown www-data.www-data /var/log/xray
+mkdir -p /etc/vmess
+mkdir -p /etc/vless
+mkdir -p /etc/trojan
+mkdir -p /etc/shadowsocks
+mkdir -p /etc/ssh
+mkdir -p /usr/bin/xray/
+mkdir -p /var/log/xray/
+mkdir -p /var/www/html
+mkdir -p /etc/jb/limit/vmess/ip
+mkdir -p /etc/jb/limit/vless/ip
+mkdir -p /etc/jb/limit/trojan/ip
+mkdir -p /etc/jb/limit/ssh/ip
+mkdir -p /etc/limit/vmess
+mkdir -p /etc/limit/vless
+mkdir -p /etc/limit/trojan
+mkdir -p /etc/limit/ssh
 chmod +x /var/log/xray
+touch /etc/xray/domain
 touch /var/log/xray/access.log
 touch /var/log/xray/error.log
 touch /var/log/xray/access2.log
 touch /var/log/xray/error2.log
+touch /etc/vmess/.vmess.db
+touch /etc/vless/.vless.db
+touch /etc/trojan/.trojan.db
+touch /etc/shadowsocks/.shadowsocks.db
+touch /etc/ssh/.ssh.db
+touch /etc/bot/.bot.db
+echo "& plughin Account" >>/etc/vmess/.vmess.db
+echo "& plughin Account" >>/etc/vless/.vless.db
+echo "& plughin Account" >>/etc/trojan/.trojan.db
+echo "& plughin Account" >>/etc/shadowsocks/.shadowsocks.db
+echo "& plughin Account" >>/etc/ssh/.ssh.db
+
 # / / Ambil Xray Core Version Terbaru
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.5.6
 
