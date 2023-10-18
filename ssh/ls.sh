@@ -1,6 +1,7 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                #!/bin/bash
-TIME="10"
-URL="https://api.telegram.org/bot$BOT_TOKEN/sendMessage"
+#!/bin/bash
+
+clear
+function bukit() {
 cat /etc/passwd | grep "/home/" | cut -d":" -f1 >/root/user.txt
 username1=($(cat "/root/user.txt"))
 i="0"
@@ -56,26 +57,31 @@ done
 for i in ${!username[*]}; do
     slip=$(cat /etc/ssh/${username[$i]})
     if [ ${jumlah[$i]} -gt $slip ]; then
-        date=$(date +"%Y-No such file or directory-0 14")
+        date=$(date +"%Y-%m-%d")
         echo "$date - ${username[$i]} - ${jumlah[$i]}"
         echo "$date - ${username[$i]} - ${jumlah[$i]}" >>/root/log-limit.txt
+        TIMES="10"
+CHATID=$(cat /etc/per/id)
+KEY=$(cat /etc/per/token)
+URL="https://api.telegram.org/bot$KEY/sendMessage"
         TEXT="
 <code>◇━━━━━━━━━━━━━━◇</code>
-<b>  ⚠️SSH OVPN NOTIF⚠️</b>
+<b>  ⚠️NOTIF SC JB7⚠️</b>
 <b>     User Multi Login</b>
 <code>◇━━━━━━━━━━━━━━◇</code>
 <b>USERNAME :</b> <code>${username[$i]} </code>
-<b>TOTAL IP :</b> <code>${jumlah[$i]} </code>
+<b>LIMIT IP :</b> <code>${slip} </code>
+<b>TOTAL IP LOGIN :</b> <code>${jumlah[$i]} </code>
 <code>◇━━━━━━━━━━━━━━◇</code>
 <code>I REMOVE ACCOUNT</code>
 <code>NO MULTI LOGINS!</code>
 "
         kill ${username[$i]}
         userdel -f ${username[$i]}
-        sed -i "/^### ${username[$i]}/d" /etc/ssh/.ssh.db
+        sed -i "/^### ${username[$i]}/d" /etc/xray/ssh
         rm /etc/xray/log-createssh-${username[$i]}.log
-        #curl -s --max-time $TIME -d "chat_id=$ADMIN&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+        curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
     fi
 done
-#clear
-
+}
+bukit
